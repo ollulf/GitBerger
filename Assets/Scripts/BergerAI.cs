@@ -7,11 +7,11 @@ public class BergerAI : SingletonBehaviour<BergerAI>
 {
     private void OnEnable()
     {
-        CommitListHandler.OnNewPlayerCommit += ReactToPlayerCommit;
+        CommitListHandler.OnNewPlayerPush += ReactToPlayerCommit;
     }
     private void OnDisable()
     {
-        CommitListHandler.OnNewPlayerCommit -= ReactToPlayerCommit;
+        CommitListHandler.OnNewPlayerPush -= ReactToPlayerCommit;
     }
     private void ReactToPlayerCommit(string str)
     {

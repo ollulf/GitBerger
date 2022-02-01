@@ -9,20 +9,19 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 
     List<Commit> commits = new List<Commit>();
 
-    public static System.Action<string> OnNewPlayerCommit;
+    public static System.Action<string> OnNewPlayerPush;
     public void AddPlayerCommit(Commit commit)
     {
         foreach (Commit old in commits)
         {
             if (old.State == Commit.States.Local)
             {
-                old.State = Commit.States.Old;
+                old.State = Commit.States.Origin;
                 old.UpdateUI();
             }
         }
 
         AddCommit(commit);
-        OnNewPlayerCommit?.Invoke(commit.Message);
     }
 
     internal void AddBergerCommit(Commit commit)
@@ -54,6 +53,19 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
             commit.State = last ? Commit.States.Local : Commit.States.Old;
             commit.UpdateUI(position);
         }
+    }
+
+    public void Push()
+    {
+        foreach (Commit old in commits)
+        {
+            if (old.State == Commit.States.Origin)
+            {
+                old.State = Commit.States.Old;
+                old.UpdateUI();
+            }
+        }
+        OnNewPlayerPush?.Invoke(commits[commits.Count -1].Message);
     }
 }
 
