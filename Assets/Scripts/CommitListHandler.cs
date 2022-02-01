@@ -32,15 +32,14 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
     private void AddCommit(Commit commit)
     {
         CommitListUIElement instance = Instantiate(commitUIPrefab, transform);
-        instance.Display(commit, CommitListItemPosition.Middle);
         instance.transform.SetSiblingIndex(0);
         commit.UIInstance = instance;
         commits.Add(commit);
+        UpdatePositions();
     }
 
     public void Pull()
     {
-        int index = 0;
         for (int i = 0; i < commits.Count; i++)
         {
             bool last = i == commits.Count - 1;
@@ -52,6 +51,17 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
             Commit commit = commits[i];
             commit.State = last ? Commit.States.Local : Commit.States.Old;
             commit.UpdateUI(position);
+        }
+    }
+
+    public void UpdatePositions()
+    {
+        for (int i = 0; i < commits.Count; i++)
+        {
+            CommitListItemPosition position = CommitListItemPosition.Middle;
+            if (i == 0) position = CommitListItemPosition.Last;
+            if (i == commits.Count - 1) position = CommitListItemPosition.First;
+            commits[i].UpdateUI(position);
         }
     }
 

@@ -17,6 +17,9 @@ public class CommitListUIElement : MonoBehaviour
     {
         branchIconImage.sprite = GetSpriteForPosition(position);
         Display(data);
+
+        if (position == CommitListItemPosition.First && data.State == Commit.States.Origin)
+            SetTextColor(Color.gray);
     }
 
     public void Display(Commit data)
@@ -27,14 +30,17 @@ public class CommitListUIElement : MonoBehaviour
         originIndicator.gameObject.SetActive(data.State == Commit.States.Origin);
 
         messageTextUI.text = data.Message;
-
-        Color textColor = data.State != Commit.States.Origin ? Color.white : Color.gray;
-        messageTextUI.color = textColor;
-        profileNameTextUI.color = textColor;
-        timeDateTextUI.color = textColor;
+        SetTextColor(Color.white);
 
         profileNameTextUI.text = GetAuthorNameFromAuthor(data.Author);
         timeDateTextUI.text = data.DateTime.ToString("MMM d") + " " + data.DateTime.ToString("T");
+    }
+
+    private void SetTextColor(Color textColor)
+    {
+        messageTextUI.color = textColor;
+        profileNameTextUI.color = textColor;
+        timeDateTextUI.color = textColor;
     }
 
     private string GetAuthorNameFromAuthor(Commit.Authors author)
