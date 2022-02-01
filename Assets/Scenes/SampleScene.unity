@@ -3867,6 +3867,7 @@ MonoBehaviour:
   componentsOnStart:
   - {fileID: 11400000, guid: 206ccd3333c12184daf839b26b46c5a4, type: 2}
   - {fileID: 11400000, guid: ade0381fcdd99904abb5e56356f9a5b6, type: 2}
+  - {fileID: 11400000, guid: cd96f982fdd3917438bca86cbae2a788, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
   commitMessageTextUI: {fileID: 994379537}
 --- !u!1 &2025804844

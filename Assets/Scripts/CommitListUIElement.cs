@@ -16,6 +16,11 @@ public class CommitListUIElement : MonoBehaviour
     public void Display(Commit data, CommitListItemPosition position)
     {
         branchIconImage.sprite = GetSpriteForPosition(position);
+        Display(data);
+    }
+
+    public void Display(Commit data)
+    {
         profileIconImage.sprite = GetSpriteForAuthor(data.Author);
 
         localIndicator.gameObject.SetActive(data.State == Commit.States.Local);
@@ -29,8 +34,7 @@ public class CommitListUIElement : MonoBehaviour
         timeDateTextUI.color = textColor;
 
         profileNameTextUI.text = GetAuthorNameFromAuthor(data.Author);
-        timeDateTextUI.text = data.DateTime.ToString("R");
-
+        timeDateTextUI.text = data.DateTime.ToString("MMM d") + " " + data.DateTime.ToString("T");
     }
 
     private string GetAuthorNameFromAuthor(Commit.Authors author)
@@ -50,6 +54,8 @@ public class CommitListUIElement : MonoBehaviour
         else
             return position == CommitListItemPosition.First ? branchFirst : branchLast;
     }
+
+
 }
 
 public enum CommitListItemPosition
