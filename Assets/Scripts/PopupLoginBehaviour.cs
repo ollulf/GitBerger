@@ -8,6 +8,8 @@ public class PopupLoginBehaviour : MonoBehaviour
 {
     [SerializeField] TMP_InputField nameField;
 
+    public static System.Action OnLogin;
+
     public void TryLogin ()
     {
         string nane = nameField.text;
@@ -38,6 +40,8 @@ public class PopupLoginBehaviour : MonoBehaviour
 
     private void Success()
     {
+        Data.Instance.PlayerName = nameField.text;
+        OnLogin?.Invoke();
         Destroy(transform.parent.gameObject);
     }
 

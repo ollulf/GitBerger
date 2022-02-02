@@ -13,16 +13,22 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 
     public static System.Action<string> OnNewPlayerPush;
 
-
     private void Start()
     {
         commits = new List<Commit>();
         state = new PullState();
+        PopupLoginBehaviour.OnLogin += OnLogin;
+    }
+
+
+    private void OnLogin ()
+    {
+        PopupLoginBehaviour.OnLogin -= OnLogin;
         AddComit(new Commit() { Author = Commit.Authors.Player, DateTime = DateTime.Now.Subtract(new TimeSpan(0, 2, 11)), Message = "Added new Unity Project", State = Commit.States.Local });
         AddComit(new Commit() { Author = Commit.Authors.Berger, DateTime = DateTime.Now.Subtract(new TimeSpan(0, 1, 3)), Message = "Added .gitignore and readme.md", State = Commit.States.Origin });
         UpdatePositions();
-
     }
+
     public void AddBergerCommit(Commit commit)
     {
         AddCommitDelayed(commit);
