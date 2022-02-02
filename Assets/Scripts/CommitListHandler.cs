@@ -74,6 +74,9 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 
     public void Pull()
     {
+        if (LoadingHandler.IsLoading)
+            return;
+
         if (CheckResultForBlock(state.TryPull()))
             return;
 
@@ -95,6 +98,9 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
     }
     public void Submit()
     {
+        if (LoadingHandler.IsLoading)
+            return;
+
         if (CheckResultForBlock(state.TrySubmit()))
             return;
 
@@ -108,6 +114,9 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
     }
     public void Push()
     {
+        if (LoadingHandler.IsLoading)
+            return;
+
         if (CheckResultForBlock(state.TryPush()))
             return;
 

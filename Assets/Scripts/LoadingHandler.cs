@@ -25,6 +25,7 @@ public class LoadingHandler : SingletonBehaviour<LoadingHandler>
         yield return new WaitForSeconds(delayInSeconds);
         delayedAction?.Invoke();
         SetLoading(false);
+        loadingCoroutine = null;
     }
     private void SetLoading(bool isLoading)
     {
