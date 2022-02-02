@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AnnoyingTeamsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public()
+
+    public IEnumerable SpawnTeamsMessage()
     {
-        
+        yield return null;
     }
+
 
     // Update is called once per frame
     void Update()
