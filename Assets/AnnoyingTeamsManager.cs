@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnnoyingTeamsManager : MonoBehaviour
 {
-    public()
+    
 
     public IEnumerable SpawnTeamsMessage()
     {
