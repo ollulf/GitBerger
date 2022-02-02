@@ -44,14 +44,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamsMessages:
-  - answered to your post.
-  - Hey, wanna play some Spelunky II?
-  - started a meeting.
+  - answered to your post in {0}
+  - Hey, wanna play some {1}?
+  - started a meeting in {0}.
   - Hey are you there?
   - We need to talk about your grades!
   - ...
   - The lesson already started! Where are you?
   - ...
+  - hey, i noticed you were playing {1}.. It's my favorite game!
+  replace0:
+  - Allgemein
+  - Bachelor Thesis
+  - Devolution
+  - Discussion and Off Topic
+  - Jobs and Internships
+  - Object Oriented Bazaar
+  replace1:
+  - Spelunky
+  - Spelunky II
+  - Fortnite
+  - Baba is You
+  - "Von wegen Rotk\xE4pchen"
+  - Minecraft
+  - 'Dim: A Light in the Dark'
+  - 'Call of Duty: Warzone'
   minTime: 0
   maxTime: 10
   textWindow: {fileID: 0}

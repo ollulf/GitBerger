@@ -303,31 +303,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2195501981017583501, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2195501981017583501, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2195501981017583501, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5833334
       objectReference: {fileID: 0}
     - target: {fileID: 5024128268790467641, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_Name
       value: PythonConsoleWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 5024128268790467641, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6357078568727847858, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6357078568727847858, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6357078568727847858, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef7659937c0c07549b0ff829d8a41a88, type: 3}

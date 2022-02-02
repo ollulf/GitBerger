@@ -7,9 +7,16 @@ public class AnnoyingTeamsManager : MonoBehaviour
 {
     [SerializeField]
     public string[] teamsMessages;
-    public int minTime,maxTime;
 
-    public GameObject textWindow,window;
+    [SerializeField]
+    public string[] replace0;
+
+    [SerializeField]
+    public string[] replace1;
+
+    public int minTime, maxTime;
+
+    public GameObject textWindow, window;
     private Animator anim;
 
 
@@ -22,12 +29,16 @@ public class AnnoyingTeamsManager : MonoBehaviour
 
     public IEnumerator SpawnTeamsMessage()
     {
-
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minTime,maxTime));
-            anim.Play("TeamsFadeIn",1);
-            textWindow.GetComponent<TMPro.TextMeshProUGUI>().text = (teamsMessages[Random.Range(0, (teamsMessages.Length-1))]);
+            yield return new WaitForSeconds(Random.Range(minTime, maxTime));
+            anim.Play("TeamsFadeIn", 1);
+
+            string message = randomIn(teamsMessages);
+
+            message = string.Format(message, randomIn(replace0), randomIn(replace1));
+
+            textWindow.GetComponent<TMPro.TextMeshProUGUI>().text = message;
             window.SetActive(true);
 
             while (window.activeSelf)
@@ -39,6 +50,10 @@ public class AnnoyingTeamsManager : MonoBehaviour
 
     }
 
+    private T randomIn<T>(T[] arr)
+    {
+        return arr[Random.Range(0, (arr.Length - 1))];
+    }
 
     public void CloseWindow()
     {

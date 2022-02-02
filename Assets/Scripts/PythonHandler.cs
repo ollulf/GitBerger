@@ -86,6 +86,7 @@ public class PythonHandler : MonoBehaviour
         //git pull
         //git push
         //play spotify
+        //upgrade to linux
 
         foreach (var method in methods)
         {
