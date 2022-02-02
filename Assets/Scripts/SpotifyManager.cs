@@ -65,7 +65,7 @@ public class SpotifyManager : MonoBehaviour
 
         if (currentSong < 0)
         {
-            currentSong = musiclist.Length;
+            currentSong = musiclist.Length-1;
         }
 
         player.clip = musiclist[currentSong];
