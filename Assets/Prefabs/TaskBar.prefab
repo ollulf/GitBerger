@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desktopFrame: {fileID: 0}
+  python: {fileID: 0}
 --- !u!1001 &339391763650514168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,6 +494,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8755874128654697612}
     m_Modifications:
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8755874128654697614}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: clickPython
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TaskBarManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5400437010097107571, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
