@@ -16,8 +16,11 @@ public class SubmitState : CommitStateBase
         if (Time.time > enterStateTime + 3)
             return new ActionResult(new PushState());
         else
-            return new ActionResult("Fetching changes...");
+            return new ActionResult("Commit failed, still fetching incomming changes...");
     }
+
+    public override ActionResult TryPush() { return new ActionResult("No commits to push... Try commiting changes first."); }
+    public override ActionResult TryPull() { return new ActionResult("No changes detected..."); }
 }
 
 public class PushState : CommitStateBase
@@ -26,6 +29,8 @@ public class PushState : CommitStateBase
     {
         return new ActionResult(new PullState());
     }
+    public override ActionResult TrySubmit() { return new ActionResult(this); }
+    public override ActionResult TryPull() { return new ActionResult("No changes detected..."); }
 }
 
 public class PullState : CommitStateBase
@@ -34,6 +39,9 @@ public class PullState : CommitStateBase
     {
         return new ActionResult(new SubmitState());
     }
+
+    public override ActionResult TrySubmit() { return new ActionResult("Origin has changes, please pull first."); }
+    public override ActionResult TryPush() { return new ActionResult("Origin has changes, please pull first."); }
 }
 
 public class CommitStateBase

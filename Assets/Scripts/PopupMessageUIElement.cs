@@ -16,11 +16,19 @@ public class PopupMessageUIElement : MonoBehaviour
     public enum Types
     {
         Error,
+        Modal,
     }
 
     private void Start()
     {
         transform.position += new Vector3(UnityEngine.Random.Range(-50, 50), UnityEngine.Random.Range(-50, 50), 0);
+    }
+
+    internal void Init(Types modal, string headerText, string textText, string buttonText, Action buttonAction)
+    {
+        headerTextUI.text = headerText;
+        textTextUI.text = textText;
+        SetButtonContent(buttonText, buttonAction, "Cancle", Close);
     }
 
     internal void Init(Types error, string errorMessage)
@@ -33,7 +41,24 @@ public class PopupMessageUIElement : MonoBehaviour
 
     private void SetButtonContent(string text1 = "", System.Action action1 = null, string text2 = "", System.Action action2 = null)
     {
-        buttonUIs[0].gameObject.SetActive(false);
-        buttonUIs[1].gameObject.SetActive(false);
+        HandleButton(buttonUIs[0], text1, action1);
+        HandleButton(buttonUIs[1], text2, action2);
+    }
+
+    private void HandleButton(Button button, string text, Action action)
+    {
+        button.gameObject.SetActive(text != "");
+        button.GetComponentInChildren<TMP_Text>().text = text;
+        button.onClick.RemoveAllListeners();
+        if (action != null)
+        {
+            button.onClick.AddListener(new UnityEngine.Events.UnityAction(action));
+            button.onClick.AddListener(Close);
+        }
+    }
+
+    public void Close()
+    {
+        Destroy(gameObject);
     }
 }

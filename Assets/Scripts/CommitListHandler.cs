@@ -26,7 +26,11 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
         {
             if (old.State == Commit.States.Local)
             {
-                old.State = Commit.States.Origin;
+                if (old.Author == Commit.Authors.Berger)
+                    old.State = Commit.States.Origin;
+                else
+                    old.State = Commit.States.Old;
+
                 old.UpdateUI();
             }
         }
@@ -51,6 +55,12 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
             commits[i].UpdateUI(position);
         }
     }
+
+    public void OpenPullWindow()
+    {
+        PopopMessageHandler.Instance.ShowModal("Pull from GITHUP", "Pull remote branch and merge them into your local branch from GITHUP!", "Pull",Pull);
+    }
+
     public void Pull()
     {
         if (CheckResultForBlock(state.TryPull()))
