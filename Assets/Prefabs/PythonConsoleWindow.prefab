@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 9001414859154244406}
   - component: {fileID: 5024128268790467640}
   m_Layer: 5
-  m_Name: PythonEditorWindow
+  m_Name: PythonConsoleWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

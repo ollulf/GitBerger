@@ -7,6 +7,9 @@ public class TaskBarManager : MonoBehaviour
     [SerializeField]
     public GameObject desktopFrame;
 
+    [SerializeField] GameObject python;
+
+    private GameObject pythonInstance;
 
     public void OpenExplorer()
     {
@@ -26,9 +29,14 @@ public class TaskBarManager : MonoBehaviour
         Application.OpenURL("https://www.youtube.com/watch?v=QJW_ML5aE9E");
     }
 
-    public void ToggleDesktop() 
+    public void ToggleDesktop()
     {
         desktopFrame.SetActive(!desktopFrame.activeSelf);
+    }
+
+    public void clickPython()
+    {
+        python.SetActive(!python.activeSelf);
     }
 
 }

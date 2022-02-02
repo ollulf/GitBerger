@@ -111,7 +111,7 @@ public class PythonHandler : MonoBehaviour
 
     public void close()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void py_help()
