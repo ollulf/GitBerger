@@ -24,4 +24,14 @@ public class TaskBarManager : MonoBehaviour
         p.Start();
     }
 
+    public void OpenMinetestWebsite()
+    {
+        Application.OpenURL("http://www.minetest.net/");
+    }
+
+    public void OpenSteamWebsite()
+    {
+        Application.OpenURL("https://www.youtube.com/watch?v=QJW_ML5aE9E");
+    }
+
 }
