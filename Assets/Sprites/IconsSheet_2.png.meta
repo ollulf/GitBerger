@@ -17,6 +17,18 @@ TextureImporter:
   - first:
       213: 7425989206954078900
     second: IconsSheet_2_4
+  - first:
+      213: -4747295305104273176
+    second: IconsSheet_2_5
+  - first:
+      213: 3576494285512247528
+    second: IconsSheet_2_6
+  - first:
+      213: -9074740136637019967
+    second: IconsSheet_2_7
+  - first:
+      213: -6251294768302194385
+    second: IconsSheet_2_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -218,6 +230,90 @@ TextureImporter:
       bones: []
       spriteID: 4b2f162d6d96e0760800000000000000
       internalID: 7425989206954078900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0516f72183e1eb0800000000000000
+      internalID: -4747295305104273176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e80c258a9242a130800000000000000
+      internalID: 3576494285512247528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c845cefceb001280800000000000000
+      internalID: -9074740136637019967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21071d6780fe39a0800000000000000
+      internalID: -6251294768302194385
       vertices: []
       indices: 
       edges: []
