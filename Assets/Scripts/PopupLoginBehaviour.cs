@@ -21,10 +21,11 @@ public class PopupLoginBehaviour : MonoBehaviour
             switch (Random.Range(0, 4))
             {
                 case 0:
+                case 1:
                     Success();
                     break;
 
-                case 1:
+                case 2:
                     PopopMessageHandler.Instance.ShowError("The provided password is incorrect. Did you use enough special characters?");
                     break;
 
