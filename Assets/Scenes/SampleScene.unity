@@ -2019,8 +2019,9 @@ GameObject:
   m_Component:
   - component: {fileID: 896566509}
   - component: {fileID: 896566510}
+  - component: {fileID: 896566511}
   m_Layer: 5
-  m_Name: WindowsBar
+  m_Name: TaskBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2079,6 +2080,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &896566511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896566508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5cb952d7f82054eba1c5da17832f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &969341106 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8162963977340645857, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
@@ -3646,6 +3659,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 896566509}
     m_Modifications:
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 896566511}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenExplorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TaskBarManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400437010097107570, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5400437010097107571, guid: 577020c209ccbc343bf4af7a8ed3d681, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
