@@ -8,11 +8,14 @@ public class LoadingHandler : SingletonBehaviour<LoadingHandler>
 {
     [SerializeField] Image loadingImageUI;
     public static bool IsLoading => Instance.loadingCoroutine != null;
+    public static System.Action<bool> OnSetLoadingState;
+
+
     Coroutine loadingCoroutine;
 
     public void Delay(float delayInSeconds, System.Action delayedAction)
     {
-        SetLoadingVisulizationActive(true);
+        SetLoading(true);
         loadingCoroutine = StartCoroutine(DelayRoutine(delayInSeconds, delayedAction));
     }
 
@@ -21,10 +24,12 @@ public class LoadingHandler : SingletonBehaviour<LoadingHandler>
     {
         yield return new WaitForSeconds(delayInSeconds);
         delayedAction?.Invoke();
-        SetLoadingVisulizationActive(false);
+        SetLoading(false);
+        loadingCoroutine = null;
     }
-    private void SetLoadingVisulizationActive(bool active)
+    private void SetLoading(bool isLoading)
     {
-        loadingImageUI.enabled = active;
+        loadingImageUI.enabled = isLoading;
+        OnSetLoadingState?.Invoke(isLoading);
     }
 }
