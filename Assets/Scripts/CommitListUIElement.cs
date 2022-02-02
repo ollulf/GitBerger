@@ -45,7 +45,7 @@ public class CommitListUIElement : MonoBehaviour
 
     private string GetAuthorNameFromAuthor(Commit.Authors author)
     {
-        return author == Commit.Authors.Player ? "Max Bredlau" : "Herr Berger";
+        return author == Commit.Authors.Player ? Data.Instance.PlayerName : "Herr Berger";
     }
 
     private Sprite GetSpriteForAuthor(Commit.Authors author)

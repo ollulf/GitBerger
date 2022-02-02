@@ -29,6 +29,18 @@ TextureImporter:
   - first:
       213: -6251294768302194385
     second: IconsSheet_2_8
+  - first:
+      213: 1741851738895676309
+    second: IconsSheet_2_9
+  - first:
+      213: 2492907892285506703
+    second: IconsSheet_2_10
+  - first:
+      213: -3579509566186479471
+    second: IconsSheet_2_11
+  - first:
+      213: 9027648078685064782
+    second: IconsSheet_2_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -314,6 +326,90 @@ TextureImporter:
       bones: []
       spriteID: f21071d6780fe39a0800000000000000
       internalID: -6251294768302194385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593f5448dec4c2810800000000000000
+      internalID: 1741851738895676309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_10
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8402712586989220800000000000000
+      internalID: 2492907892285506703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190a75db307035ec0800000000000000
+      internalID: -3579509566186479471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconsSheet_2_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ec247d816a84d70800000000000000
+      internalID: 9027648078685064782
       vertices: []
       indices: 
       edges: []
