@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 7631599201558400066}
   - component: {fileID: 4071932790096439548}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pull remote branch and merge them into your local branch from GITHUB!
+  m_text: Pull remote branch and merge them into your local branch from GITHUP!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b96e3a2dc83bdb645a43dc4ec7dded4c, type: 2}
   m_sharedMaterial: {fileID: -2722652901630498596, guid: b96e3a2dc83bdb645a43dc4ec7dded4c, type: 2}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 490715479168886349}
   - component: {fileID: 6538838928940985680}
   m_Layer: 5
-  m_Name: Pull
+  m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
     m_Right: 5
     m_Top: 5
     m_Bottom: 5
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 4
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 2210906516092427775}
   - component: {fileID: 8706854315865189518}
   - component: {fileID: 8917973770184838535}
+  - component: {fileID: 4092662130279522634}
   m_Layer: 5
   m_Name: PopUpBox
   m_TagString: Untagged
@@ -338,6 +339,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4092662130279522634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796677685538488968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2cffc8fe2aecd4aae64d2cc28fd197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  errorSprite: {fileID: 7322791705214265039, guid: 39151d3a7594ecb46b22dd4d3e52fb88, type: 3}
+  iconImageUI: {fileID: 7141705344982611522}
+  headerTextUI: {fileID: 1901033277155041905}
+  textTextUI: {fileID: 4071932790096439548}
+  buttonUIs:
+  - {fileID: 1349678824449922263}
+  - {fileID: 5719889018458526458}
 --- !u!1 &6486322721319826905
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +370,7 @@ GameObject:
   - component: {fileID: 8682018765445342778}
   - component: {fileID: 1901033277155041905}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,7 +694,7 @@ GameObject:
   - component: {fileID: 3678911983945081779}
   - component: {fileID: 7141705344982611522}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -834,7 +854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8162963977340645858, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
       propertyPath: m_Name
-      value: ComitMessage_UIPrefab (1)
+      value: Button2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162963977340645858, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
@@ -843,6 +867,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8162963977340645857, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
   m_PrefabInstance: {fileID: 4479266048785392410}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5719889018458526458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8162963977340645856, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
+  m_PrefabInstance: {fileID: 4479266048785392410}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7202286878098629943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -940,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8162963977340645858, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
       propertyPath: m_Name
-      value: ComitMessage_UIPrefab
+      value: Button1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
@@ -949,3 +984,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8162963977340645857, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
   m_PrefabInstance: {fileID: 7202286878098629943}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1349678824449922263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8162963977340645856, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
+  m_PrefabInstance: {fileID: 7202286878098629943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

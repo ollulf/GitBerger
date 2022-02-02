@@ -79,13 +79,13 @@ public class SpotifyManager : MonoBehaviour
         {
             player.Pause();
             isPaused = true;
-            playbutton.GetComponent<UnityEngine.UI.Image>().overrideSprite = pausesprite;
+            playbutton.GetComponent<UnityEngine.UI.Image>().overrideSprite = playsprite;
         }
         else
         {
             player.UnPause();
             isPaused = false;
-            playbutton.GetComponent<UnityEngine.UI.Image>().overrideSprite = playsprite;
+            playbutton.GetComponent<UnityEngine.UI.Image>().overrideSprite = pausesprite;
         }
 
     }
