@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2cffc8fe2aecd4aae64d2cc28fd197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errorSprite: {fileID: -320968955913235607, guid: 39151d3a7594ecb46b22dd4d3e52fb88, type: 3}
+  errorSprite: {fileID: 7425989206954078900, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
   iconImageUI: {fileID: 7141705344982611522}
   headerTextUI: {fileID: 1901033277155041905}
   textTextUI: {fileID: 4071932790096439548}

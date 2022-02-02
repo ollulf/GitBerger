@@ -7,20 +7,25 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 {
     [SerializeField] private CommitListUIElement commitUIPrefab;
 
-    private List<Commit> commits = new List<Commit>();
+    private List<Commit> commits;
     private CommitStateBase state;
     private Commit current;
 
     public static System.Action<string> OnNewPlayerPush;
-    
+
 
     private void Start()
     {
-        state = new SubmitState();
+        commits = new List<Commit>();
+        state = new PullState();
+        AddComit(new Commit() { Author = Commit.Authors.Player, DateTime = DateTime.Now.Subtract(new TimeSpan(0, 2, 11)), Message = "Added new Unity Project", State = Commit.States.Local });
+        AddComit(new Commit() { Author = Commit.Authors.Berger, DateTime = DateTime.Now.Subtract(new TimeSpan(0, 1, 3)), Message = "Added .gitignore and readme.md", State = Commit.States.Origin });
+        UpdatePositions();
+
     }
     public void AddBergerCommit(Commit commit)
     {
-        AddCommit(commit);
+        AddCommitDelayed(commit);
     }
     private void AddPlayerCommit(Commit commit)
     {
@@ -37,39 +42,40 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
             }
         }
 
-        AddCommit(commit);
-
-   
+        AddCommitDelayed(commit);
     }
-    private void AddCommit(Commit commit)
+    private void AddCommitDelayed(Commit commit)
     {
         current = commit;
-        LoadingHandler.Instance.Delay(1, AddCommitDelayed);
+        LoadingHandler.Instance.Delay(1, () => AddComit(current));
     }
 
-    private void AddCommitDelayed()
+    private void AddComit(Commit commit)
     {
         CommitListUIElement instance = Instantiate(commitUIPrefab, transform);
         instance.transform.SetSiblingIndex(0);
-        current.UIInstance = instance;
-        commits.Add(current);
+        commit.UIInstance = instance;
+        commits.Add(commit);
         UpdatePositions();
     }
 
     public void UpdatePositions()
     {
+        Debug.Log(commits.Count);
+
         for (int i = 0; i < commits.Count; i++)
         {
             CommitListItemPosition position = CommitListItemPosition.Middle;
             if (i == 0) position = CommitListItemPosition.Last;
             if (i == commits.Count - 1) position = CommitListItemPosition.First;
+
             commits[i].UpdateUI(position);
         }
     }
 
     public void OpenPullWindow()
     {
-        PopopMessageHandler.Instance.ShowModal("Pull from GITHUP", "Pull remote branch and merge them into your local branch from GITHUP!", "Pull",Pull);
+        PopopMessageHandler.Instance.ShowModal("Pull from GITHUP", "Pull remote branch and merge them into your local branch from GITHUP!", "Pull", Pull);
     }
 
     public void Pull()
