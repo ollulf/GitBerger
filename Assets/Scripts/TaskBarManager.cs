@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class TaskBarManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    public GameObject desktopFrame;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OpenExplorer()
     {
@@ -32,6 +24,11 @@ public class TaskBarManager : MonoBehaviour
     public void OpenSteamWebsite()
     {
         Application.OpenURL("https://www.youtube.com/watch?v=QJW_ML5aE9E");
+    }
+
+    public void ToggleDesktop() 
+    {
+        desktopFrame.SetActive(!desktopFrame.activeSelf);
     }
 
 }
