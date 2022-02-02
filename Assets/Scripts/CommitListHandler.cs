@@ -9,8 +9,10 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 
     private List<Commit> commits = new List<Commit>();
     private CommitStateBase state;
+    private Commit current;
 
     public static System.Action<string> OnNewPlayerPush;
+    
 
     private void Start()
     {
@@ -36,15 +38,24 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
         }
 
         AddCommit(commit);
+
+   
     }
     private void AddCommit(Commit commit)
     {
+        current = commit;
+        LoadingHandler.Instance.Delay(1, AddCommitDelayed);
+    }
+
+    private void AddCommitDelayed()
+    {
         CommitListUIElement instance = Instantiate(commitUIPrefab, transform);
         instance.transform.SetSiblingIndex(0);
-        commit.UIInstance = instance;
-        commits.Add(commit);
+        current.UIInstance = instance;
+        commits.Add(current);
         UpdatePositions();
     }
+
     public void UpdatePositions()
     {
         for (int i = 0; i < commits.Count; i++)
@@ -66,44 +77,54 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
         if (CheckResultForBlock(state.TryPull()))
             return;
 
-        for (int i = 0; i < commits.Count; i++)
+        LoadingHandler.Instance.Delay(1, () =>
         {
-            bool last = i == commits.Count - 1;
+            for (int i = 0; i < commits.Count; i++)
+            {
+                bool last = i == commits.Count - 1;
 
-            CommitListItemPosition position = CommitListItemPosition.Middle;
-            if (i == 0) position = CommitListItemPosition.Last;
-            if (last) position = CommitListItemPosition.First;
+                CommitListItemPosition position = CommitListItemPosition.Middle;
+                if (i == 0) position = CommitListItemPosition.Last;
+                if (last) position = CommitListItemPosition.First;
 
-            Commit commit = commits[i];
-            commit.State = last ? Commit.States.Local : Commit.States.Old;
-            commit.UpdateUI(position);
-        }
+                Commit commit = commits[i];
+                commit.State = last ? Commit.States.Local : Commit.States.Old;
+                commit.UpdateUI(position);
+            }
+        });
     }
     public void Submit()
     {
         if (CheckResultForBlock(state.TrySubmit()))
             return;
 
-        Commit newCommit = new Commit() { Author = Commit.Authors.Player, DateTime = System.DateTime.Now, Message = CommitMessageLineDisplayer.Instance.Text, State = Commit.States.Local };
-        AddPlayerCommit(newCommit);
-        CommitMessageLineDisplayer.Instance.Text = "";
-        CommitMessageComposer.Instance.Start();
+        LoadingHandler.Instance.Delay(1, () =>
+        {
+            Commit newCommit = new Commit() { Author = Commit.Authors.Player, DateTime = System.DateTime.Now, Message = CommitMessageLineDisplayer.Instance.Text, State = Commit.States.Local };
+            AddPlayerCommit(newCommit);
+            CommitMessageLineDisplayer.Instance.Text = "";
+            CommitMessageComposer.Instance.Start();
+        });
     }
     public void Push()
     {
         if (CheckResultForBlock(state.TryPush()))
             return;
 
-        foreach (Commit old in commits)
+        LoadingHandler.Instance.Delay(1, () =>
         {
-            if (old.State == Commit.States.Origin)
+            foreach (Commit old in commits)
             {
-                old.State = Commit.States.Old;
-                old.UpdateUI();
+                if (old.State == Commit.States.Origin)
+                {
+                    old.State = Commit.States.Old;
+                    old.UpdateUI();
+                }
             }
-        }
-        OnNewPlayerPush?.Invoke(commits[commits.Count - 1].Message);
+            OnNewPlayerPush?.Invoke(commits[commits.Count - 1].Message);
+        });
     }
+
     private bool CheckResultForBlock(ActionResult result)
     {
         if (result.Type == ActionResult.Types.Error)

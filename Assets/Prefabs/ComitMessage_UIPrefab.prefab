@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 8162963977340645871}
   - component: {fileID: 8162963977340645856}
   - component: {fileID: -44813236025271103}
+  - component: {fileID: 4084604204453563747}
   m_Layer: 0
   m_Name: ComitMessage_UIPrefab
   m_TagString: Untagged
@@ -346,3 +347,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textUI: {fileID: 8162963975507150495}
   buttonUI: {fileID: 8162963977340645856}
+--- !u!114 &4084604204453563747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162963977340645858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08e82c5831cc8640afee851b663f326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
