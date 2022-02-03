@@ -18,12 +18,14 @@ public class AnnoyingTeamsManager : MonoBehaviour
 
     public GameObject textWindow, window;
     private Animator anim;
+    private AudioSource teamsSound;
 
 
     public void Start()
     {
         window.SetActive(false);
         anim = window.GetComponent<Animator>();
+        teamsSound = gameObject.GetComponent<AudioSource>();
         StartCoroutine(SpawnTeamsMessage());
     }
 
@@ -33,6 +35,7 @@ public class AnnoyingTeamsManager : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(minTime, maxTime));
             anim.Play("TeamsFadeIn", 1);
+            teamsSound.Play();
 
             string message = randomIn(teamsMessages);
 
