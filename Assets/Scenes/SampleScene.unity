@@ -4420,6 +4420,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1891644505587687923, guid: b2998c6e590a7514ea0eb12d5c7036d4, type: 3}
+      propertyPath: m_text
+      value: "\u200B"
+      objectReference: {fileID: 0}
     - target: {fileID: 2210906516092427775, guid: b2998c6e590a7514ea0eb12d5c7036d4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
