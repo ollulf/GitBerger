@@ -48,6 +48,8 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
             }
         }
 
+        ChangesHandler.Instance.ClearChanges();
+
         AddCommitDelayed(commit);
     }
     private void AddCommitDelayed(Commit commit)
@@ -106,6 +108,8 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
                 commit.State = last ? Commit.States.Local : Commit.States.Old;
                 commit.UpdateUI(position);
             }
+
+            ChangesHandler.Instance.AddNewChanges();
         });
     }
     public void Submit()

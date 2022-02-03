@@ -24,10 +24,7 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
 
     private void SetMessageOptions(CommitMessageTextComponent[] components)
     {
-        //destroy childs
-        for (int i = transform.childCount - 1; i >= 0; i--)
-            Destroy(transform.GetChild(i).gameObject);
-
+        transform.DestroyAllChildren();
         foreach (CommitMessageTextComponent component in components)
         {
             Instantiate(commitMessageUIPrefab, transform).Init(component);
