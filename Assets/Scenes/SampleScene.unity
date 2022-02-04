@@ -5808,6 +5808,11 @@ MonoBehaviour:
   componentsOnStart:
   - {fileID: 11400000, guid: 1fd008ecd5a405a46b41d4ee1d0f0f3d, type: 2}
   - {fileID: 11400000, guid: 45e15a12219b28246a94d77581e4b05b, type: 2}
+  - {fileID: 11400000, guid: 940de95c0b4b15b4795a6c6c4fbdc5b3, type: 2}
+  - {fileID: 11400000, guid: dca6a182cc3604249b1d765bd7dd5c12, type: 2}
+  - {fileID: 11400000, guid: fe13da81bf5138240a00c49ebc2a421f, type: 2}
+  - {fileID: 11400000, guid: d2546002b5cfe1d46a4393991b018db0, type: 2}
+  - {fileID: 11400000, guid: 202cf0d5d62176f46b58cb3d5b92d7b9, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
   commitMessageTextUI: {fileID: 994379537}
 --- !u!1 &2114662771
@@ -7015,7 +7020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -32, y: 12}
+  m_AnchoredPosition: {x: -32, y: -32}
   m_SizeDelta: {x: 64, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6168646276188009204
