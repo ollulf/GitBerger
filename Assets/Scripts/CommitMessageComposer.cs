@@ -27,7 +27,10 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
         transform.DestroyAllChildren();
         foreach (CommitMessageTextComponent component in components)
         {
-            Instantiate(commitMessageUIPrefab, transform).Init(component);
+            foreach (CommitMessageTextComponent text in component.TextArray)
+            {
+                Instantiate(commitMessageUIPrefab, transform).Init(text);
+            }
         }
     }
 }
