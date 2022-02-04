@@ -19,7 +19,7 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
     public void AddToMessage(CommitMessageTextComponent associated)
     {
         CommitMessageLineDisplayer.Instance.Text += " " + associated.Text;
-        SetMessageOptions(associated.possibleFollowups);
+        SetMessageOptions(associated.Followups);
     }
 
     private void SetMessageOptions(CommitMessageTextComponent[] components)
@@ -29,7 +29,8 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
         {
             foreach (CommitMessageTextComponent text in component.TextArray)
             {
-                Instantiate(commitMessageUIPrefab, transform).Init(text);
+                if (text.Unlocked)
+                    Instantiate(commitMessageUIPrefab, transform).Init(text);
             }
         }
     }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1300af1e1acd3bf488c9a77bb4f8afb8, type: 3}
   m_Name: Removed
   m_EditorClassIdentifier: 
+  Unlocked: 0
   possibleFollowups:
   - {fileID: 11400000, guid: f2ced03a071e3274f912106a2b2b3eb7, type: 2}
   custom: 

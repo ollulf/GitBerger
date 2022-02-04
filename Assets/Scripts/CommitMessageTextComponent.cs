@@ -6,9 +6,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CommitMessageTextComponent : ScriptableObject
 {
+    public bool Unlocked = true;
     public string Text => name == "Custom" ? custom : name;
     public CommitMessageTextComponent[] TextArray => GetTextArray();
-    public CommitMessageTextComponent[] possibleFollowups;
+    [SerializeField] private CommitMessageTextComponent[] possibleFollowups;
+    public CommitMessageTextComponent[] Followups => possibleFollowups;
 
     public string custom = "";
     protected virtual CommitMessageTextComponent[] GetTextArray()

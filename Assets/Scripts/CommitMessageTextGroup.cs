@@ -7,6 +7,6 @@ public class CommitMessageTextGroup : CommitMessageTextComponent
 {
     protected override CommitMessageTextComponent[] GetTextArray()
     {
-        return possibleFollowups;
+        return Followups;
     }
 }
