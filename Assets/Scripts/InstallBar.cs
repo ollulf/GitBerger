@@ -30,8 +30,7 @@ public class InstallBar : MonoBehaviour
             yield return null;
             t += Time.deltaTime;
         }
-
-        yield return new WaitForSeconds(_duration);
+        
         _onCompleted?.Invoke();
 
         Destroy(gameObject);

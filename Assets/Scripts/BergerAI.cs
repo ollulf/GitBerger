@@ -10,28 +10,23 @@ using UnityEngine.UIElements;
 
 public class BergerAI : SingletonBehaviour<BergerAI>
 {
-    [SerializeField] CommitAction[] actions;
-    [SerializeField] CommitActionObject[] actionObjects;
+    CommitActionBehaviour[] actions;
 
     private void OnEnable()
     {
         CommitListHandler.OnNewPlayerPush += ReactToPlayerCommit;
+        actions = GetComponentsInChildren<CommitActionBehaviour>();
     }
+
     private void OnDisable()
     {
         CommitListHandler.OnNewPlayerPush -= ReactToPlayerCommit;
     }
     private void ReactToPlayerCommit(string str)
     {
-        List<CommitAction> matches = new List<CommitAction>();
+        List<CommitActionBehaviour> matches = new List<CommitActionBehaviour>();
 
-        foreach (CommitAction action in actions)
-        {
-            if (action.bIsMatch(str))
-                matches.Add(action);
-        }
-
-        foreach (CommitAction action in actionObjects)
+        foreach (CommitActionBehaviour action in actions)
         {
             if (action.bIsMatch(str))
                 matches.Add(action);
@@ -39,12 +34,21 @@ public class BergerAI : SingletonBehaviour<BergerAI>
 
         foreach (var match in matches)
         {
-            Debug.Log("Triggered " + match.ToString());
-            match.run();
+            Debug.Log("Triggered Action: " + match.ToString());
+            StartCoroutine(ActionRoutine(match));
         }
 
         string reactionMessage = GetReactionToPlayerCommit(str);
-        
+
+    }
+
+    private IEnumerator ActionRoutine(CommitActionBehaviour _action)
+    {
+        foreach (var item in _action.SubActions)
+        {
+            yield return new WaitForSeconds(item.Delay);
+            item.run();
+        }
     }
 
     private string GetReactionToPlayerCommit(string str)
@@ -71,11 +75,5 @@ public class BergerAI : SingletonBehaviour<BergerAI>
         yield return new WaitForSeconds(waitTime);
         Commit newCommit = new Commit() { Author = Commit.Authors.Berger, DateTime = DateTime.Now, Message = reaction, State = Commit.States.Origin };
         CommitListHandler.Instance.AddBergerCommit(newCommit);
-    }
-
-    private void OnValidate()
-    {
-        foreach (var action in actions)
-            action.validate();
     }
 }

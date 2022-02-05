@@ -3,28 +3,17 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu]
-public class CommitActionObject : ScriptableObject
-{
-    [SerializeField]
-    private CommitAction action;
-
-    public static implicit operator CommitAction(CommitActionObject b) => b.action;
-
-    private void OnValidate()
-    {
-        action.validate();
-    }
-}
-
-
-[System.Serializable]
-public class CommitAction
+public class CommitActionBehaviour : MonoBehaviour
 {
     [SerializeField]
     private string match;
 
     [SerializeReference]
     private List<Action> actions;
+
+    public List<Action> SubActions => actions;
+
+    public string DisplayName => "Action on: " + match;
 
     [SerializeField]
     private ActionType addType;
@@ -34,20 +23,14 @@ public class CommitAction
         return _source.Contains(match);
     }
 
-    public void run()
-    {
-        foreach (var item in actions)
-            item.run();
-
-    }
-
     public override string ToString()
     {
         return "Action: " + match;
     }
 
-    public void validate()
+    private void OnValidate()
     {
+        name = DisplayName;
         if (addType == ActionType.None)
             return;
 
@@ -55,12 +38,6 @@ public class CommitAction
         {
             case ActionType.Event:
                 actions.Add(new EventAction());
-                break;
-            case ActionType.BergerEmote:
-                actions.Add(new BergerEmoteAction());
-                break;
-            case ActionType.Comment:
-                actions.Add(new CommentAction());
                 break;
             case ActionType.BergerCommit:
                 actions.Add(new BergerCommitAction());
@@ -77,8 +54,6 @@ public enum ActionType
 {
     None,
     Event,
-    BergerEmote,
-    Comment,
     BergerCommit,
     InstallApp
 }
@@ -86,6 +61,11 @@ public enum ActionType
 [System.Serializable]
 public abstract class Action
 {
+    [SerializeField]
+    protected float delay;
+
+    public float Delay => delay;
+
     public abstract void run();
 }
 
@@ -102,34 +82,6 @@ public class EventAction : Action
 }
 
 [System.Serializable]
-public class BergerEmoteAction : Action
-{
-    [Header("BergerEmote")]
-    [SerializeField]
-    string message;
-
-    public override void run()
-    {
-        //BergerChibi.instance.say(message,state);
-        Debug.Log("Berger says " + message);
-    }
-}
-
-[System.Serializable]
-public class CommentAction : Action
-{
-    [Header("Comment")]
-    [SerializeField]
-    [Multiline]
-    string message;
-
-    public override void run()
-    {
-        Debug.Log("CMT:" + message);
-    }
-}
-
-[System.Serializable]
 public class BergerCommitAction : Action
 {
     [Header("Berger Commits")]
@@ -137,11 +89,15 @@ public class BergerCommitAction : Action
     [Multiline]
     string message;
 
+    [SerializeField]
+    ChibiBergerHandler.Emotion emotion;
+
     public override void run()
     {
+        ChibiBergerHandler.Instance.Say(message, emotion);
         BergerAI.Instance.BergerCommits(message);
     }
-}
+}  
 
 [System.Serializable]
 public class InstallAction : Action
