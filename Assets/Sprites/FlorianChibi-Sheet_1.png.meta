@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: -6534545858163413054
     second: FlorianChibi-Sheet_1_5
+  - first:
+      213: -2984707773508889943
+    second: FlorianChibi-Sheet_1_6
+  - first:
+      213: -2185913437933459696
+    second: FlorianChibi-Sheet_1_7
+  - first:
+      213: -6445339299813702412
+    second: FlorianChibi-Sheet_1_8
+  - first:
+      213: -6022147078610188594
+    second: FlorianChibi-Sheet_1_9
+  - first:
+      213: -5086331723073828465
+    second: FlorianChibi-Sheet_1_10
+  - first:
+      213: -7277507718507872026
+    second: FlorianChibi-Sheet_1_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -254,6 +272,132 @@ TextureImporter:
       bones: []
       spriteID: 2cf6babd921a055a0800000000000000
       internalID: -6534545858163413054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlorianChibi-Sheet_1_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2d7a9f7103496d0800000000000000
+      internalID: -2984707773508889943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlorianChibi-Sheet_1_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01729364f431aa1e0800000000000000
+      internalID: -2185913437933459696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlorianChibi-Sheet_1_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f44db14e0e8d86a0800000000000000
+      internalID: -6445339299813702412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlorianChibi-Sheet_1_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6884283290d6ca0800000000000000
+      internalID: -6022147078610188594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlorianChibi-Sheet_1_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8942641f38b969b0800000000000000
+      internalID: -5086331723073828465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlorianChibi-Sheet_1_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0cc24b949110b90800000000000000
+      internalID: -7277507718507872026
       vertices: []
       indices: 
       edges: []
