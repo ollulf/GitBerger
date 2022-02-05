@@ -16,7 +16,7 @@ public class PopopMessageHandler : SingletonBehaviour<PopopMessageHandler>
         return Instantiate(popupPrefab, transform);
     }
 
-    internal void ShowModal(string headerText, string textText, string buttonText, Action buttonAction)
+    internal void ShowModal(string headerText, string textText, string buttonText, System.Action buttonAction)
     {
         SpawnPopup().Init(PopupMessageUIElement.Types.Modal, headerText, textText, buttonText, buttonAction);
     }

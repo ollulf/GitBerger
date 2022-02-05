@@ -20,7 +20,7 @@ public class LoadingHandler : SingletonBehaviour<LoadingHandler>
     }
 
 
-    private IEnumerator DelayRoutine(float delayInSeconds, Action delayedAction)
+    private IEnumerator DelayRoutine(float delayInSeconds, System.Action delayedAction)
     {
         yield return new WaitForSeconds(delayInSeconds);
         delayedAction?.Invoke();

@@ -143,7 +143,7 @@ public class PythonMethod
         Callback = method;
     }
 
-    public PythonMethod(string name, string helpMessage, Action method)
+    public PythonMethod(string name, string helpMessage, System.Action method)
     {
         Name = name;
         HelpMessage = helpMessage;

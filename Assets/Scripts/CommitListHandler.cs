@@ -69,7 +69,7 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 
     public void UpdatePositions()
     {
-        Debug.Log(commits.Count);
+        //Debug.Log(commits.Count);
 
         for (int i = 0; i < commits.Count; i++)
         {

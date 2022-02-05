@@ -24,7 +24,7 @@ public class PopupMessageUIElement : MonoBehaviour
         transform.position += new Vector3(UnityEngine.Random.Range(-50, 50), UnityEngine.Random.Range(-50, 50), 0);
     }
 
-    internal void Init(Types modal, string headerText, string textText, string buttonText, Action buttonAction)
+    internal void Init(Types modal, string headerText, string textText, string buttonText, System.Action buttonAction)
     {
         headerTextUI.text = headerText;
         textTextUI.text = textText;
@@ -45,7 +45,7 @@ public class PopupMessageUIElement : MonoBehaviour
         HandleButton(buttonUIs[1], text2, action2);
     }
 
-    private void HandleButton(Button button, string text, Action action)
+    private void HandleButton(Button button, string text, System.Action action)
     {
         button.gameObject.SetActive(text != "");
         button.GetComponentInChildren<TMP_Text>().text = text;
