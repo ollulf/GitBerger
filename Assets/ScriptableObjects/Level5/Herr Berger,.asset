@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1300af1e1acd3bf488c9a77bb4f8afb8, type: 3}
   m_Name: Herr Berger,
   m_EditorClassIdentifier: 
-  possibleFollowups: []
+  possibleFollowups:
+  - {fileID: 11400000, guid: 74ebb525e20c2be4c9a5c914982bbf51, type: 2}
+  - {fileID: 11400000, guid: 36b9ef39145de1843a4b80e667118bec, type: 2}
   custom: 
