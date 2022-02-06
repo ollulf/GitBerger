@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Life
   m_EditorClassIdentifier: 
   possibleFollowups: []
-  custom: 
+  custom: life?

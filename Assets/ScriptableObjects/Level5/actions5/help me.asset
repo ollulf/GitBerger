@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: help me
   m_EditorClassIdentifier: 
   possibleFollowups: []
-  custom: 
+  custom: help me!
