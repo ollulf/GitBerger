@@ -6751,6 +6751,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3751802395841742649, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
+      propertyPath: mainMatch
+      value: life?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855357075148086281, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
+      propertyPath: m_Name
+      value: 'Action on: life? TODO'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
 --- !u!4 &2863364109981772313 stripped
