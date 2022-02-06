@@ -585,6 +585,7 @@ Transform:
   - {fileID: 7589457418730698512}
   - {fileID: 3343219011008773386}
   - {fileID: 6755393263768007100}
+  - {fileID: 7242589090114055569}
   m_Father: {fileID: 2863364110805193659}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1908,6 +1909,84 @@ MonoBehaviour:
         delay: 1
         message: I am happy you feel that way. We worked very hard for this.
         emotion: 3
+--- !u!1 &6584820850075900358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7242589090114055569}
+  - component: {fileID: 5095287438765112276}
+  m_Layer: 0
+  m_Name: 'Action on: Thank You!'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7242589090114055569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584820850075900358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6355319843418529933}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5095287438765112276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584820850075900358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMatch: Thank You!
+  additionalMatches: []
+  actions:
+  - id: 0
+  - id: 1
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 3
+        message: 'It is time for me to leave. Here is your certificate. Goodbye.
+
+'
+        emotion: 2
+    00000001:
+      type: {class: EventAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 6
+        Event:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
 --- !u!1 &6592384576231128526
 GameObject:
   m_ObjectHideFlags: 0
