@@ -241,6 +241,7 @@ MonoBehaviour:
   playbutton: {fileID: 9022643148990757831}
   playsprite: {fileID: -5405850698454367847, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
   pausesprite: {fileID: -147195370610664487, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
+  toUnlock: {fileID: 11400000, guid: c135c01c2ac89314e9a7adbe46c55f5c, type: 2}
 --- !u!82 &5163876996383367774
 AudioSource:
   m_ObjectHideFlags: 0

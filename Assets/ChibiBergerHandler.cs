@@ -7,6 +7,7 @@ public class ChibiBergerHandler : SingletonBehaviour<ChibiBergerHandler>
     [SerializeField] Animator animator;
     [SerializeField] string[] animatorNamePerEmotion;
     [SerializeField] TMPro.TextMeshProUGUI text;
+    [SerializeField] GameObject speechbubble;
 
     public enum Emotion
     {
@@ -23,6 +24,7 @@ public class ChibiBergerHandler : SingletonBehaviour<ChibiBergerHandler>
         animator.Play(animatorNamePerEmotion[(int)_emotion]);
         text.gameObject.SetActive(true);
         text.text = _message;
+        speechbubble.SetActive(true);
 
         StartCoroutine(SayRoutine());
     }
@@ -33,6 +35,7 @@ public class ChibiBergerHandler : SingletonBehaviour<ChibiBergerHandler>
 
         text.text = "";
         text.gameObject.SetActive(false);
+        speechbubble.SetActive(false);
         animator.Play(animatorNamePerEmotion[(int)Emotion.Idle]);
     }
 
