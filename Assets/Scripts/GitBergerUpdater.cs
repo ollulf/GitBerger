@@ -6,6 +6,8 @@ public class GitBergerUpdater : MonoBehaviour
 {
     [SerializeField]
     public GameObject textBox, doneButton, loadingIcon;
+    [SerializeField]
+    CommitMessageTextComponent florian;
 
     public IEnumerator UpdateGitBerger()
     {
@@ -22,6 +24,7 @@ public class GitBergerUpdater : MonoBehaviour
             textBox.GetComponent<TMPro.TextMeshProUGUI>().text = "Installing Update...";
             yield return new WaitForSeconds(5);
             textBox.GetComponent<TMPro.TextMeshProUGUI>().text = "Your GitBerger client is Uptodate!";
+            CommitMessageComposer.Instance.unlockCommit(florian);
             Data.Instance.HasGitUpdate = true;
         } else
         {
