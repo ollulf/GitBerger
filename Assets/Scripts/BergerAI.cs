@@ -10,12 +10,12 @@ using UnityEngine.UIElements;
 
 public class BergerAI : SingletonBehaviour<BergerAI>
 {
-    CommitActionBehaviour[] actions;
+    List<CommitActionBehaviour> actions;
 
     private void OnEnable()
     {
         CommitListHandler.OnNewPlayerPush += ReactToPlayerCommit;
-        actions = GetComponentsInChildren<CommitActionBehaviour>();
+        actions = GetComponentsInChildren<CommitActionBehaviour>().ToList();
     }
 
     private void OnDisable()
@@ -36,10 +36,10 @@ public class BergerAI : SingletonBehaviour<BergerAI>
         {
             Debug.Log("Triggered Action: " + match.ToString());
             StartCoroutine(ActionRoutine(match));
+            actions.Remove(match);
         }
 
         string reactionMessage = GetReactionToPlayerCommit(str);
-
     }
 
     private IEnumerator ActionRoutine(CommitActionBehaviour _action)
