@@ -269,7 +269,7 @@ MonoBehaviour:
     00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
       data:
-        delay: 3
+        delay: 7
         name: Spotify
         icon: {fileID: -320968955913235607, guid: 39151d3a7594ecb46b22dd4d3e52fb88, type: 3}
         duration: 5
@@ -407,7 +407,7 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 2
-        message: Wait until you try C++...
+        message: Wait until you try C++ but you should start with python.
         emotion: 5
     00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
@@ -982,7 +982,7 @@ MonoBehaviour:
         message: 'Please be more specific! What kind of features?
 
           Also
-          always use a FeatureFactory to create new fatures.'
+          always use a FeatureFactory to create new features.'
         emotion: 1
 --- !u!1 &3171082678655516014
 GameObject:
@@ -1121,19 +1121,16 @@ MonoBehaviour:
   actions:
   - id: 0
   - id: 1
-  - id: 2
   addType: 0
   references:
     version: 1
     00000000:
-      type: {class: , ns: , asm: }
-    00000001:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 1
         message: Well.. Microsoft is always looking. Did you install teams yet?
         emotion: 5
-    00000002:
+    00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 0
