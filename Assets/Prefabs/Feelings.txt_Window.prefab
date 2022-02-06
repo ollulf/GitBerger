@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 5247356309867412219}
   - component: {fileID: 3361964466697440138}
   - component: {fileID: 3296613921235561091}
-  - component: {fileID: 3714545474553381097}
   m_Layer: 5
   m_Name: Feelings.txt_Window
   m_TagString: Untagged
@@ -213,21 +212,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3714545474553381097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508096680301733260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68f6cb071e1b42b4c8f8f997c92bb1b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textBox: {fileID: 0}
-  doneButton: {fileID: 0}
-  loadingIcon: {fileID: 0}
 --- !u!1 &1762685652800376167
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,8 +537,8 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 9013710079033226823}
-  m_TextViewport: {fileID: 0}
-  m_TextComponent: {fileID: 0}
+  m_TextViewport: {fileID: 6053705684051898442}
+  m_TextComponent: {fileID: 260229447841165368}
   m_Placeholder: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
   m_VerticalScrollbarEventHandler: {fileID: 0}
@@ -564,7 +548,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
@@ -598,7 +582,8 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: 'Dear Diary today I played Minecraft and got killed by a creeper while
+    mining diamonds. I was very sad... '
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -808,8 +793,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dear Diary today I played Minecraft and got killed by a creeper while
-    mining diamonds. I was very sad... '
+  m_text: "Dear Diary today I played Minecraft and got killed by a creeper while
+    mining diamonds. I was very sad... \u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b96e3a2dc83bdb645a43dc4ec7dded4c, type: 2}
   m_sharedMaterial: {fileID: -2722652901630498596, guid: b96e3a2dc83bdb645a43dc4ec7dded4c, type: 2}
