@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  match: ...
+  mainMatch: ...
+  additionalMatches: []
   actions:
   - id: 0
   - id: 1

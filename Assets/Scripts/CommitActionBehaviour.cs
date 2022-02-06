@@ -1,31 +1,45 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class CommitActionBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private string match;
+    [FormerlySerializedAs("match")]
+    private string mainMatch;
+
+    [SerializeField]
+    private string[] additionalMatches;
 
     [SerializeReference]
     private List<Action> actions;
 
     public List<Action> SubActions => actions;
 
-    public string DisplayName => "Action on: " + match;
+    public string DisplayName => "Action on: " + mainMatch + (additionalMatches.Length > 0 ? $"(+{additionalMatches.Length})" : "");
 
     [SerializeField]
     private ActionType addType;
 
     public bool bIsMatch(string _source)
     {
-        return _source.Contains(match);
+        if (additionalMatches.Length > 0)
+        {
+            foreach (var match in additionalMatches)
+            {
+                if (_source.Contains(match))
+                    return true;
+            }
+        }
+
+        return _source.Contains(mainMatch);
     }
 
     public override string ToString()
     {
-        return "Action: " + match;
+        return "Action: " + mainMatch;
     }
 
     private void OnValidate()
