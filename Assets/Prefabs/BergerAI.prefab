@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 7589457418730698512}
   - component: {fileID: 4961611631275649672}
   m_Layer: 0
-  m_Name: 'Action on: please don''t pull TODO'
+  m_Name: 'Action on: please don''t pull'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -532,10 +532,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: please don't pull
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: Started working on local branch
+        emotion: 5
 --- !u!1 &1979507694377206431
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +599,7 @@ GameObject:
   - component: {fileID: 648704028526495549}
   - component: {fileID: 8480402933488701074}
   m_Layer: 0
-  m_Name: 'Action on: help me TODO'
+  m_Name: 'Action on: help me'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,10 +633,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: help me
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: Sure, how?
+        emotion: 0
 --- !u!1 &2695840171708724366
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +655,7 @@ GameObject:
   - component: {fileID: 1222502200948644382}
   - component: {fileID: 4129527138106875374}
   m_Layer: 0
-  m_Name: 'Action on: please pull TODO'
+  m_Name: 'Action on: please pull'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,10 +689,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: please pull
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: Already did!
+        emotion: 3
 --- !u!1 &2723710958432305446
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +711,7 @@ GameObject:
   - component: {fileID: 5509861094915011545}
   - component: {fileID: 7903772381679878392}
   m_Layer: 0
-  m_Name: 'Action on: please commit TODO'
+  m_Name: 'Action on: please commit'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,10 +745,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: please commit
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: Filed some TODOs concerning client behaviour when the server is
+          down.
+        emotion: 3
 --- !u!1 &2853799568384511297
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +804,7 @@ MonoBehaviour:
   additionalMatches: []
   actions:
   - id: 0
+  - id: 1
   addType: 0
   references:
     version: 1
@@ -784,6 +814,12 @@ MonoBehaviour:
         delay: 0
         components:
         - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
+    00000001:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: I'm sorry, but IT'S TIME TO SAY GOODBYEEE!
+        emotion: 4
 --- !u!1 &2863364110805193657
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +1027,7 @@ GameObject:
   - component: {fileID: 7217734626453494366}
   - component: {fileID: 8292302153423585059}
   m_Layer: 0
-  m_Name: 'Action on: are you? TODO'
+  m_Name: 'Action on: are you?'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1025,10 +1061,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: are you?
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: I feel melancholic, I should write a song!
+        emotion: 4
 --- !u!1 &3990695142861222261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1120,7 @@ MonoBehaviour:
   actions:
   - id: 0
   - id: 1
+  - id: 2
   addType: 0
   references:
     version: 1
@@ -1086,8 +1130,30 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 1
-        message: Well, you use GitHub, what did you expect?
+        message: Did you install teams yet?
         emotion: 5
+    00000002:
+      type: {class: InstallAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        name: Teams
+        icon: {fileID: -3579509566186479471, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
+        duration: 10
+        onCompleted:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
 --- !u!1 &4493599928855951880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1201,7 @@ MonoBehaviour:
   additionalMatches: []
   actions:
   - id: 0
+  - id: 1
   addType: 0
   references:
     version: 1
@@ -1144,6 +1211,13 @@ MonoBehaviour:
         delay: 0
         components:
         - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
+    00000001:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: 'I''m sorry but it''s too late. Upside of this: Since I''m not your
+          Prof. anymore you may call me Florian now!'
+        emotion: 3
 --- !u!1 &4556105524327188518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1285,7 @@ GameObject:
   - component: {fileID: 5681803040848901990}
   - component: {fileID: 8091578874680154313}
   m_Layer: 0
-  m_Name: 'Action on: please don''t commit TODO'
+  m_Name: 'Action on: please don''t commit'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,10 +1319,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: please don't commit
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: You need to commit at least 3 times a week!
+        emotion: 1
 --- !u!1 &4636319197250493008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,7 +1750,7 @@ GameObject:
   - component: {fileID: 6982861033519174654}
   - component: {fileID: 6111921990412809004}
   m_Layer: 0
-  m_Name: 'Action on: please stop TODO'
+  m_Name: 'Action on: please stop'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1703,10 +1784,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: please stop
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: No you!
+        emotion: 5
 --- !u!1 &6296447521479062095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1956,7 @@ GameObject:
   - component: {fileID: 4230816057512639562}
   - component: {fileID: 7032282606357413793}
   m_Layer: 0
-  m_Name: 'Action on: please don''t stop TODO'
+  m_Name: 'Action on: please don''t stop'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1902,10 +1990,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: please don't stop
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: I will never truly stop.
+        emotion: 0
 --- !u!1 &6752622900679169769
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,7 +2447,7 @@ GameObject:
   - component: {fileID: 7237972564395015004}
   - component: {fileID: 3751802395841742649}
   m_Layer: 0
-  m_Name: 'Action on: life? TODO'
+  m_Name: 'Action on: life?'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2386,7 +2481,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: life?
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        message: Life is good.  Sometimes not so much, but im allways exited what
+          comes next!
+        emotion: 3
