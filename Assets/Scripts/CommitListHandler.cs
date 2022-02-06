@@ -109,7 +109,7 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
                 commit.UpdateUI(position);
             }
 
-            ChangesHandler.Instance.AddNewChanges();
+            ChangesHandler.Instance.AddNewChanges(onFirstChanges: CommitMessageComposer.Instance.UpdateCommitOptions);
         });
     }
     public void Submit()
@@ -125,7 +125,6 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
             Commit newCommit = new Commit() { Author = Commit.Authors.Player, DateTime = System.DateTime.Now, Message = CommitMessageLineDisplayer.Instance.Text, State = Commit.States.Local };
             AddPlayerCommit(newCommit);
             CommitMessageLineDisplayer.Instance.Text = "";
-            CommitMessageComposer.Instance.Start();
         });
     }
     public void Push()

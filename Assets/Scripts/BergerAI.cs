@@ -55,7 +55,7 @@ public class BergerAI : SingletonBehaviour<BergerAI>
     {
         string[] answers = new string[] {
             "For you it's HERR Berger!",
-                "This commit at least once a week!",
+                "Please commit at least once a week!",
                 "Continue like this and you will not get your certificate!",
                 "Capitalism is failing!",
                 "Wanna play Minetest later?"

@@ -6,21 +6,24 @@ using UnityEngine;
 
 public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
 {
-    [SerializeField] CommitMessageTextComponent[] componentsOnStart;
+    [SerializeField] CommitMessageTextComponent[] components;
     [SerializeField] CommitMessageTextComponent[] lockedComponents;
     [SerializeField] CommitMessageOptionUIElement commitMessageUIPrefab;
-    [SerializeField] TMP_Text commitMessageTextUI;
 
     private HashSet<CommitMessageTextComponent> lockedSet = new HashSet<CommitMessageTextComponent>();
-
     private HashSet<CommitMessageTextComponent> consumedSet = new HashSet<CommitMessageTextComponent>();
 
-    public void Start()
+    private void Start()
     {
         foreach (var comp in lockedComponents)
             lockCommit(comp);
 
-        SetMessageOptions(componentsOnStart);
+        clearOptions();
+    }
+
+    public void UpdateCommitOptions()
+    {
+        SetMessageOptions(components);
     }
 
     public void AddToMessage(CommitMessageTextComponent associated)
@@ -79,9 +82,9 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
             return false;
         }
 
-        if (_component.Followups.Length == 0)
+        if (consumedSet.Contains(_component))
         {
-            return !consumedSet.Contains(_component);
+            return false;
         }
         else
         {
@@ -92,6 +95,6 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
             }
         }
 
-        return false;
+        return true;
     }
 }

@@ -42,14 +42,15 @@ public class ChangesHandler : SingletonBehaviour<ChangesHandler>
         };
     }
 
-    public void AddNewChanges()
+    public void AddNewChanges(System.Action onFirstChanges)
     {
-        StartCoroutine(AddChangesRoutine());
+        StartCoroutine(AddChangesRoutine(onFirstChanges));
     }
 
-    private IEnumerator AddChangesRoutine()
+    private IEnumerator AddChangesRoutine(System.Action onFirstChanges)
     {
         yield return new WaitForSeconds(0.5f);
+        onFirstChanges?.Invoke();
         loadingCircle.SetActive(true);
         for (int i = 0; i < UnityEngine.Random.Range(2,5); i++)
         {

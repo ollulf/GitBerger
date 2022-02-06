@@ -59,6 +59,9 @@ public class CommitActionBehaviour : MonoBehaviour
             case ActionType.InstallApp:
                 actions.Add(new InstallAction());
                 break;
+            case ActionType.UnlockText:
+                actions.Add(new UnlockAction());
+                break;
         }
         addType = ActionType.None;
     }
@@ -69,7 +72,8 @@ public enum ActionType
     None,
     Event,
     BergerCommit,
-    InstallApp
+    InstallApp,
+    UnlockText
 }
 
 [System.Serializable]
@@ -140,11 +144,11 @@ public class UnlockAction : Action
 {
     [Header("Unlock")]
     [SerializeField]
-    CommitMessageTextComponent component;
+    CommitMessageTextComponent[] components;
 
     public override void run()
     {
-        if (component != null)
+        foreach (CommitMessageTextComponent component in components)
             CommitMessageComposer.Instance.unlockCommit(component);
     }
 }
