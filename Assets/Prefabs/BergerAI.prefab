@@ -62,8 +62,8 @@ MonoBehaviour:
       data:
         delay: 0
         components:
-        - {fileID: 0}
-        - {fileID: 0}
+        - {fileID: 11400000, guid: 16958ae7a95bf6a4388ffb8c0b332570, type: 2}
+        - {fileID: 11400000, guid: 6bc99efae38a27c4ab6b08e6f838607c, type: 2}
 --- !u!1 &482960304
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 2
-        message: You did not install the Upodate! That's a major security risk!
+        message: You did not install the Update! That's a major security risk!
         emotion: 5
     00000001:
       type: {class: EventAction, ns: , asm: Assembly-CSharp}
@@ -350,8 +350,8 @@ MonoBehaviour:
       data:
         delay: 0
         components:
-        - {fileID: 0}
-        - {fileID: 0}
+        - {fileID: 11400000, guid: 16958ae7a95bf6a4388ffb8c0b332570, type: 2}
+        - {fileID: 11400000, guid: 6bc99efae38a27c4ab6b08e6f838607c, type: 2}
 --- !u!1 &1760606442
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 4176676546664493305}
   - component: {fileID: 620401255969294040}
   m_Layer: 0
-  m_Name: 'Action on: observed TODO'
+  m_Name: 'Action on: observed'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,10 +1008,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: observed
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
+  - id: 1
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: , ns: , asm: }
+    00000001:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: Well, you use GitHub, what did you expect?
+        emotion: 5
 --- !u!1 &4493599928855951880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,8 +1222,9 @@ Transform:
   - {fileID: 4176676546664493305}
   - {fileID: 1760606443}
   - {fileID: 482960305}
-  - {fileID: 3302495892027714770}
   - {fileID: 9098576571575303273}
+  - {fileID: 3302495892027714770}
+  - {fileID: 6855409901674114438}
   m_Father: {fileID: 2863364110805193659}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1426,7 +1437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4507650916269991266}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5263453613515422656
 MonoBehaviour:
@@ -1446,6 +1457,63 @@ MonoBehaviour:
   addType: 0
   references:
     version: 1
+--- !u!1 &5208631060509291278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6855409901674114438}
+  - component: {fileID: 7210083327703249817}
+  m_Layer: 0
+  m_Name: 'Action on: hate Uni'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6855409901674114438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208631060509291278}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4507650916269991266}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7210083327703249817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208631060509291278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMatch: hate Uni
+  additionalMatches: []
+  actions:
+  - id: 0
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: I am sorry you feel that way. I should add more Coding courses to
+          improve your experience.
+        emotion: 0
 --- !u!1 &5759039622452004177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1623,7 @@ GameObject:
   - component: {fileID: 3302495892027714770}
   - component: {fileID: 3176440865814348508}
   m_Layer: 0
-  m_Name: 'Action on: Uni TODO'
+  m_Name: 'Action on: love Uni'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1573,7 +1641,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4507650916269991266}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3176440865814348508
 MonoBehaviour:
@@ -1587,12 +1655,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMatch: Uni
+  mainMatch: love Uni
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: I am happy you feel that way. We worked very hard for this.
+        emotion: 3
 --- !u!1 &6592384576231128526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1765,7 @@ GameObject:
   - component: {fileID: 3602775220667472287}
   - component: {fileID: 4562632747022021520}
   m_Layer: 0
-  m_Name: 'Action on: good TODO'
+  m_Name: 'Action on: good'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1724,10 +1799,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: good
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: Merged branch "I feel good" into "who asked?"
+        emotion: 0
 --- !u!1 &7484239224345106260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +2016,7 @@ GameObject:
   - component: {fileID: 7482653920939312641}
   - component: {fileID: 1094774542674214099}
   m_Layer: 0
-  m_Name: 'Action on: bad TODO'
+  m_Name: 'Action on: bad'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1968,10 +2050,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMatch: bad
   additionalMatches: []
-  actions: []
+  actions:
+  - id: 0
   addType: 0
   references:
     version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: Do not worry. It's okay to feel bad. Life is long, plenty of happy
+          moments still lie ahead.
+        emotion: 3
 --- !u!1 &8263241782227141048
 GameObject:
   m_ObjectHideFlags: 0
