@@ -86,11 +86,6 @@ public class PythonHandler : MonoBehaviour
         methods.Add(new PythonMethod("uninstall_teams", "teams python api - uninstaller", py_uninstall_teams));
         methods.Add(new PythonMethod("spotify_next", "spotify api - play next song", py_spotify_next));
 
-        //git pull
-        //git push
-        //play spotify
-        //upgrade to linux
-
         foreach (var method in methods)
         {
             scope.SetVariable(method.Name, method.Callback);
@@ -134,7 +129,7 @@ public class PythonHandler : MonoBehaviour
 
     private void py_password()
     {
-        writeMsgToConsole(Data.Instance.PlayerName);
+        writeMsgToConsole(Data.Instance.Password);
     }
 
     private void py_uninstall_teams()
@@ -156,6 +151,7 @@ public class PythonHandler : MonoBehaviour
         if (SpotifyManager.Instance)
         {
             SpotifyManager.Instance.NextSong();
+            writeMsgToConsole("Spotify - Playing Next Song");
         }
         else
         {

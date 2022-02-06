@@ -39,7 +39,7 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
         else
             SetMessageOptions(associated.Followups);
     }
-    
+
     public void lockCommit(CommitMessageTextComponent _component)
     {
         lockedSet.Add(_component);
@@ -88,13 +88,15 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
         }
         else
         {
+            if (_component.Followups.Length == 0)
+                return true;
+
             foreach (var followup in _component.Followups)
             {
                 if (IsComponentUsable(followup, depth + 1))
                     return true;
             }
+            return false;
         }
-
-        return true;
     }
 }

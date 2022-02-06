@@ -7,6 +7,7 @@ using TMPro;
 public class PopupLoginBehaviour : MonoBehaviour
 {
     [SerializeField] TMP_InputField nameField;
+    [SerializeField] TMP_InputField passwordField;
 
     public static System.Action OnLogin;
     private int loginCounter = 0;
@@ -43,6 +44,7 @@ public class PopupLoginBehaviour : MonoBehaviour
     private void Success()
     {
         Data.Instance.PlayerName = nameField.text;
+        Data.Instance.Password = passwordField.text;
         OnLogin?.Invoke();
         Destroy(transform.parent.gameObject);
     }
