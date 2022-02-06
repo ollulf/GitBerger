@@ -944,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameField: {fileID: 2128906031295985477}
+  passwordField: {fileID: 4525322769077206357}
 --- !u!1 &5682409948818535649
 GameObject:
   m_ObjectHideFlags: 0

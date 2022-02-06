@@ -12,7 +12,7 @@ public class PopupLoginBehaviour : MonoBehaviour
     public static System.Action OnLogin;
     private int loginCounter = 0;
 
-    public void TryLogin ()
+    public void TryLogin()
     {
         string nane = nameField.text;
         loginCounter++;
@@ -44,7 +44,7 @@ public class PopupLoginBehaviour : MonoBehaviour
     private void Success()
     {
         Data.Instance.PlayerName = nameField.text;
-        Data.Instance.Password = passwordField.text;
+        Data.Instance.Password = string.IsNullOrEmpty(passwordField.text) ? "password123" : passwordField.text;
         OnLogin?.Invoke();
         Destroy(transform.parent.gameObject);
     }
