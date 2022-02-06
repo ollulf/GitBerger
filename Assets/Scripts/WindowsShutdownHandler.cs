@@ -28,7 +28,7 @@ public class WindowsShutdownHandler : SingletonBehaviour<WindowsShutdownHandler>
         float t = 0;
         while (t < 1)
         {
-            shutdown.text = "Updating windows.. " + t.ToString("%") + "%";
+            shutdown.text = "Updating windows.. " + t.ToString("0%");
             yield return new WaitForSeconds(5);
             t += 0.01f;
         }
