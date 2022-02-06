@@ -11,8 +11,14 @@ public class VolumeSlider : MonoBehaviour
 
     public void SetMasterVolume(Slider volume)
     {
-        Debug.Log("SetMasterVolume" + slider.value);
-
-        mixer.SetFloat("Volume", Mathf.Log(slider.value) * 20);
+            mixer.SetFloat("Volume", Mathf.Max(Mathf.Log(slider.value) * 20, -80f));
+        /*
+        if (slider.value < 0.001f)
+            mixer.SetFloat("Volume", 0);
+        else
+        */
+        float value;
+        mixer.GetFloat("Volume", out value);
+        Debug.Log("GetMasterVolume" +  value);
     }
 }
