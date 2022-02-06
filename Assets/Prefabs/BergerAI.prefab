@@ -407,8 +407,8 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 2
-        message: I LOVE coding!
-        emotion: 3
+        message: Wait until you try C++...
+        emotion: 5
     00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
       data:
