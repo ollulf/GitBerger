@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class ChangesHandler : SingletonBehaviour<ChangesHandler>
 {
-    [SerializeField] Sprite[] actionIcons;
-    [SerializeField] Sprite fileIcon;
+    [SerializeField] Sprite[] actionIcons, fileIcon;
 
     [SerializeField] ChangeUIElement changePrefab;
     [SerializeField] GameObject loadingCircle;
@@ -57,7 +56,7 @@ public class ChangesHandler : SingletonBehaviour<ChangesHandler>
             Instantiate(changePrefab, transform).Init(
                 changeFileNames[UnityEngine.Random.Range(0, changeFileNames.Length)],
                 actionIcons[UnityEngine.Random.Range(0, actionIcons.Length)],
-                fileIcon
+                fileIcon[UnityEngine.Random.Range(0, actionIcons.Length)]
                 );
             yield return new WaitForSeconds(0.25f);
         }
