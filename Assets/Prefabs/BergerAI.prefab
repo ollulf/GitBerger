@@ -1131,7 +1131,7 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 1
-        message: Did you install teams yet?
+        message: Well.. Microsoft is always looking. Did you install teams yet?
         emotion: 5
     00000002:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}

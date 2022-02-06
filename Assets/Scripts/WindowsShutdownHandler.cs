@@ -26,11 +26,13 @@ public class WindowsShutdownHandler : SingletonBehaviour<WindowsShutdownHandler>
         yield return new WaitForSeconds(15);
 
         float t = 0;
-        while (true)
+        while (t < 1)
         {
             shutdown.text = "Updating windows.. " + t.ToString("%") + "%";
             yield return new WaitForSeconds(5);
             t += 0.01f;
         }
+
+        Application.Quit();
     }
 }
