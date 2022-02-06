@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TextEditorWindow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject window;
+    [SerializeField] TMP_InputField inputField;
+    [SerializeField] CommitMessageTextComponent toUnlock;
+    private string text = "Dear Diary today I played Minecraft and got killed by a creeper while mining diamonds.I was very sad...";
 
-    // Update is called once per frame
-    void Update()
+    public void Open()
     {
-        
+        window.SetActive(true);
+        inputField.text = text;
+        CommitMessageComposer.Instance.unlockCommit(toUnlock);
+    }
+    public void Close()
+    {
+        text = inputField.text;
+        window.SetActive(false);
     }
 }
