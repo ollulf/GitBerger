@@ -18,7 +18,7 @@ public class CommitActionBehaviour : MonoBehaviour
 
     public List<Action> SubActions => actions;
 
-    public string DisplayName => "Action on: " + mainMatch + (additionalMatches.Length > 0 ? $"(+{additionalMatches.Length})" : "");
+    public string DisplayName => "Action on: " + mainMatch + (additionalMatches.Length > 0 ? $"(+{additionalMatches.Length})" : "") + (actions.Count == 0 ? " TODO" : "");
 
     [SerializeField]
     private ActionType addType;

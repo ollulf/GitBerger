@@ -428,6 +428,7 @@ MonoBehaviour:
   textBox: {fileID: 1924282456519089448}
   doneButton: {fileID: 5719889018458526456}
   loadingIcon: {fileID: 6199390761793353507}
+  florian: {fileID: 11400000, guid: da61fb4b83722ed4198b448ff1512c0d, type: 2}
 --- !u!1 &6486322721319826905
 GameObject:
   m_ObjectHideFlags: 0
