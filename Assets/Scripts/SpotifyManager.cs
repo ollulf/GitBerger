@@ -12,6 +12,8 @@ public class SpotifyManager : SingletonBehaviour<SpotifyManager>
     public GameObject text,playbutton;
     public Sprite playsprite, pausesprite;
 
+    [SerializeField] CommitMessageTextComponent toUnlock;
+
     private int currentSong = -1;
     private bool isPaused = true;
     // Start is called before the first frame update
@@ -75,6 +77,8 @@ public class SpotifyManager : SingletonBehaviour<SpotifyManager>
 
     public void TogglePlay()
     {
+        CommitMessageComposer.Instance.unlockCommit(toUnlock);
+
         if (!isPaused)
         {
             player.Pause();
