@@ -5908,8 +5908,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecb4f316db6228f4880236402a090f3a, type: 2}
   - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
   - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
-  - {fileID: 11400000, guid: dca6a182cc3604249b1d765bd7dd5c12, type: 2}
-  - {fileID: 11400000, guid: d2546002b5cfe1d46a4393991b018db0, type: 2}
   - {fileID: 11400000, guid: 940de95c0b4b15b4795a6c6c4fbdc5b3, type: 2}
   - {fileID: 11400000, guid: dfb8553ded3b0de4ca670fbdac9df119, type: 2}
   lockedComponents:
@@ -5918,8 +5916,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecb4f316db6228f4880236402a090f3a, type: 2}
   - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
   - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
-  - {fileID: 11400000, guid: dca6a182cc3604249b1d765bd7dd5c12, type: 2}
-  - {fileID: 11400000, guid: d2546002b5cfe1d46a4393991b018db0, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
 --- !u!1 &2114662771
 GameObject:
