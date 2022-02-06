@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Anime
   m_EditorClassIdentifier: 
   possibleFollowups: []
-  custom: 
+  custom: anime?

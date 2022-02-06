@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1300af1e1acd3bf488c9a77bb4f8afb8, type: 3}
   m_Name: I3
   m_EditorClassIdentifier: 
-  possibleFollowups: []
+  possibleFollowups:
+  - {fileID: 11400000, guid: 1dc13bef9e1a56a46a74c6d5d5ba2757, type: 2}
+  - {fileID: 11400000, guid: 8cc1c81b19d16674d91046b432daf334, type: 2}
   custom: I
