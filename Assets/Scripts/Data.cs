@@ -8,4 +8,9 @@ public class Data : SingletonBehaviour<Data>
     public string Password = "";
     public bool NeedsGitUpdate = false;
     public bool HasGitUpdate = false;
+
+    public void SetNeedsUpdate(bool update)
+    {
+        NeedsGitUpdate = update;
+    }
 }
