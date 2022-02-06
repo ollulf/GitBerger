@@ -5918,6 +5918,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a6b05844e4337b04399f29e08aa502c0, type: 2}
   - {fileID: 11400000, guid: 4dfe6b6473298f44a860e3d1f9a79f74, type: 2}
   - {fileID: 11400000, guid: da61fb4b83722ed4198b448ff1512c0d, type: 2}
+  - {fileID: 11400000, guid: 16958ae7a95bf6a4388ffb8c0b332570, type: 2}
+  - {fileID: 11400000, guid: 6bc99efae38a27c4ab6b08e6f838607c, type: 2}
   lockedComponents:
   - {fileID: 11400000, guid: 202cf0d5d62176f46b58cb3d5b92d7b9, type: 2}
   - {fileID: 11400000, guid: c135c01c2ac89314e9a7adbe46c55f5c, type: 2}
@@ -5925,6 +5927,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
   - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
   - {fileID: 11400000, guid: da61fb4b83722ed4198b448ff1512c0d, type: 2}
+  - {fileID: 11400000, guid: 16958ae7a95bf6a4388ffb8c0b332570, type: 2}
+  - {fileID: 11400000, guid: 6bc99efae38a27c4ab6b08e6f838607c, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
 --- !u!1 &2114662771
 GameObject:
@@ -6696,29 +6700,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 454254007}
     - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8755874128462839906}
-    - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2863364110805193657, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: m_Name
       value: BergerAI
@@ -6765,18 +6749,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2863364110805193659, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4507650916269991266, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4507650916269991266, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4507650916269991266, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
