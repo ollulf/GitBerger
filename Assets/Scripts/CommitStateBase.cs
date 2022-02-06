@@ -29,7 +29,7 @@ public class PushState : CommitStateBase
     {
         return new ActionResult(new PullState());
     }
-    public override ActionResult TrySubmit() { return new ActionResult(this); }
+    public override ActionResult TrySubmit() { return new ActionResult("Git berger only support one commit per push. Please push first."); }
     public override ActionResult TryPull() { return new ActionResult("No changes detected..."); }
 }
 

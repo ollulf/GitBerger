@@ -6,32 +6,92 @@ using UnityEngine;
 
 public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
 {
-
     [SerializeField] CommitMessageTextComponent[] componentsOnStart;
+    [SerializeField] CommitMessageTextComponent[] lockedComponents;
     [SerializeField] CommitMessageOptionUIElement commitMessageUIPrefab;
     [SerializeField] TMP_Text commitMessageTextUI;
 
+    private HashSet<CommitMessageTextComponent> lockedSet = new HashSet<CommitMessageTextComponent>();
+
+    private HashSet<CommitMessageTextComponent> consumedSet = new HashSet<CommitMessageTextComponent>();
+
     public void Start()
     {
+        foreach (var comp in lockedComponents)
+            lockCommit(comp);
+
         SetMessageOptions(componentsOnStart);
     }
 
     public void AddToMessage(CommitMessageTextComponent associated)
     {
         CommitMessageLineDisplayer.Instance.Text += " " + associated.Text;
-        SetMessageOptions(associated.Followups);
+
+        if (associated.Followups.Length == 0)
+        {
+            consumedSet.Add(associated);
+            clearOptions();
+            CommitSubmitter.Instance.setCanSubmit(true);
+        }
+        else
+            SetMessageOptions(associated.Followups);
+    }
+    
+    public void lockCommit(CommitMessageTextComponent _component)
+    {
+        lockedSet.Add(_component);
     }
 
-    private void SetMessageOptions(CommitMessageTextComponent[] components)
+    public void unlockCommit(CommitMessageTextComponent _component)
+    {
+        lockedSet.Remove(_component);
+    }
+
+    public bool IsUnlocked(CommitMessageTextComponent _component)
+    {
+        return !lockedSet.Contains(_component);
+    }
+
+    private void clearOptions()
     {
         transform.DestroyAllChildren();
-        foreach (CommitMessageTextComponent component in components)
+    }
+
+    private void SetMessageOptions(CommitMessageTextComponent[] _components)
+    {
+        CommitSubmitter.Instance.setCanSubmit(false);
+        clearOptions();
+        foreach (CommitMessageTextComponent component in _components)
         {
             foreach (CommitMessageTextComponent text in component.TextArray)
             {
-                if (text.Unlocked)
+                if (IsUnlocked(text) && IsComponentUsable(text))
                     Instantiate(commitMessageUIPrefab, transform).Init(text);
             }
         }
+    }
+
+    private bool IsComponentUsable(CommitMessageTextComponent _component, int depth = 0)
+    {
+        if (depth > 10)
+        {
+            Debug.LogError("Circular selection on " + _component);
+            return false;
+        }
+
+        if (_component.Followups.Length == 0)
+        {
+            return !consumedSet.Contains(_component);
+        }
+        else
+        {
+            foreach (var followup in _component.Followups)
+            {
+                if (IsComponentUsable(followup, depth + 1))
+                    return true;
+            }
+        }
+
+        return false;
     }
 }

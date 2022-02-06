@@ -14,8 +14,6 @@ public class PopupLoginBehaviour : MonoBehaviour
     {
         string nane = nameField.text;
 
-        Debug.Log(nameField.text);
-
         if (nameField.text == "")
             PopopMessageHandler.Instance.ShowError("Please use a correct user name associated with a GITHUP account!");
         else

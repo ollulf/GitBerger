@@ -5886,6 +5886,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe13da81bf5138240a00c49ebc2a421f, type: 2}
   - {fileID: 11400000, guid: d2546002b5cfe1d46a4393991b018db0, type: 2}
   - {fileID: 11400000, guid: 202cf0d5d62176f46b58cb3d5b92d7b9, type: 2}
+  - {fileID: 11400000, guid: c135c01c2ac89314e9a7adbe46c55f5c, type: 2}
+  - {fileID: 11400000, guid: ecb4f316db6228f4880236402a090f3a, type: 2}
+  - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
+  lockedComponents:
+  - {fileID: 11400000, guid: 202cf0d5d62176f46b58cb3d5b92d7b9, type: 2}
+  - {fileID: 11400000, guid: c135c01c2ac89314e9a7adbe46c55f5c, type: 2}
+  - {fileID: 11400000, guid: ecb4f316db6228f4880236402a090f3a, type: 2}
+  - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
+  - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
   commitMessageTextUI: {fileID: 994379537}
 --- !u!1 &2114662771
@@ -7083,7 +7092,6 @@ GameObject:
   - component: {fileID: 6168646276188009213}
   - component: {fileID: 6168646276188009202}
   - component: {fileID: 6168646276188009201}
-  - component: {fileID: 6168646276188009204}
   m_Layer: 0
   m_Name: ComitButton
   m_TagString: Untagged
@@ -7124,11 +7132,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.32156864, g: 0.32156864, b: 0.32156864, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.29054022, g: 0.6509434, b: 0.15659486, a: 1}
+    m_HighlightedColor: {r: 0.9339623, g: 0.59880745, b: 0.33922213, a: 1}
+    m_PressedColor: {r: 0.3473453, g: 0.22988607, b: 0.7735849, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7180,18 +7188,6 @@ RectTransform:
   m_AnchoredPosition: {x: -32, y: -32}
   m_SizeDelta: {x: 64, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6168646276188009204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6168646276188009200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08e82c5831cc8640afee851b663f326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &6168646276188009212
 CanvasRenderer:
   m_ObjectHideFlags: 0

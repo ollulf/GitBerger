@@ -97,7 +97,7 @@ public class BergerCommitAction : Action
         ChibiBergerHandler.Instance.Say(message, emotion);
         BergerAI.Instance.BergerCommits(message);
     }
-}  
+}
 
 [System.Serializable]
 public class InstallAction : Action
@@ -118,5 +118,19 @@ public class InstallAction : Action
     public override void run()
     {
         InstallationHandler.Instance.Install(name, icon, duration, () => onCompleted.Invoke());
+    }
+}
+
+[System.Serializable]
+public class UnlockAction : Action
+{
+    [Header("Unlock")]
+    [SerializeField]
+    CommitMessageTextComponent component;
+
+    public override void run()
+    {
+        if (component != null)
+            CommitMessageComposer.Instance.unlockCommit(component);
     }
 }
