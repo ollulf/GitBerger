@@ -28,7 +28,7 @@ public class PushState : CommitStateBase
     public override ActionResult TryPush()
     {
         if (Data.Instance.NeedsGitUpdate && !Data.Instance.HasGitUpdate)
-            return new ActionResult("GITHUP does not support GitBerger Versions oder then 3.13f15 you are using 3.06f9. Please install the recent update.");
+            return new ActionResult("GITHUP does not support GitBerger Versions older then 3.13f15 you are using 3.06f9. Please install the recent update.");
         else
             return new ActionResult(new PullState());
     }
