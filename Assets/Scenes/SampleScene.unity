@@ -2667,9 +2667,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionIcons:
-  - {fileID: 7553955284465897314, guid: 39151d3a7594ecb46b22dd4d3e52fb88, type: 3}
-  - {fileID: 7322791705214265039, guid: 39151d3a7594ecb46b22dd4d3e52fb88, type: 3}
-  fileIcon: {fileID: 7425989206954078900, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
+  - {fileID: 2689255067411136985, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  - {fileID: -3832373912033781638, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  - {fileID: -6823058481762574540, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  - {fileID: -7483101941225248167, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  fileIcon:
+  - {fileID: -4350380583603717266, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  - {fileID: -3316430620126243026, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  - {fileID: -302347149617563368, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
+  - {fileID: -4420731449723714601, guid: 8a62ffcf7025a6e4abcacf53b09856e1, type: 3}
   changePrefab: {fileID: 5618521800473188284, guid: 9e0333c5b76d52d4c935a09fea09b6d2, type: 3}
   loadingCircle: {fileID: 1428677551}
 --- !u!224 &1066715462 stripped
