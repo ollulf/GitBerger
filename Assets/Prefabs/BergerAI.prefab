@@ -407,7 +407,7 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 2
-        message: Wait until you try C++...
+        message: Wait until you try C++ but you should start with python.
         emotion: 5
     00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
