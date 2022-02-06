@@ -9,16 +9,20 @@ public class PopupLoginBehaviour : MonoBehaviour
     [SerializeField] TMP_InputField nameField;
 
     public static System.Action OnLogin;
+    private int loginCounter = 0;
 
     public void TryLogin ()
     {
         string nane = nameField.text;
+        loginCounter++;
 
         if (nameField.text == "")
             PopopMessageHandler.Instance.ShowError("Please use a correct user name associated with a GITHUP account!");
         else
         {
-            switch (Random.Range(0, 4))
+            int rand = loginCounter > 4 ? 0 : Random.Range(0, 4);
+
+            switch (loginCounter)
             {
                 case 0:
                 case 1:

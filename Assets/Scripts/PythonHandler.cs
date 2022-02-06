@@ -10,8 +10,9 @@ using TMPro;
 public class PythonHandler : MonoBehaviour
 {
     [SerializeField] TMP_InputField input;
-    [SerializeField] Transform content;
+    [SerializeField] RectTransform content;
     [SerializeField] TMP_Text textPrefab;
+    [SerializeField] Sprite teamsSprite;
 
     ScriptEngine engine;
     ScriptScope scope;
@@ -82,6 +83,8 @@ public class PythonHandler : MonoBehaviour
     {
         methods.Add(new PythonMethod("help", "displays useful available methods", py_help));
         methods.Add(new PythonMethod("password", "displays your password", py_password));
+        methods.Add(new PythonMethod("uninstall_teams", "teams python api - uninstaller", py_uninstall_teams));
+        methods.Add(new PythonMethod("spotify_next", "spotify api - play next song", py_spotify_next));
 
         //git pull
         //git push
@@ -107,6 +110,11 @@ public class PythonHandler : MonoBehaviour
     {
         var textInstance = Instantiate(textPrefab, content);
         textInstance.text = obj;
+        content.sizeDelta = new Vector2(content.sizeDelta.x, content.sizeDelta.y + 10);
+
+        if (content.sizeDelta.y > 125)
+            content.anchoredPosition = new Vector2(content.anchoredPosition.x, content.sizeDelta.y - 125);
+
         return textInstance;
     }
 
@@ -126,7 +134,35 @@ public class PythonHandler : MonoBehaviour
 
     private void py_password()
     {
-        writeMsgToConsole("student");
+        writeMsgToConsole(Data.Instance.PlayerName);
+    }
+
+    private void py_uninstall_teams()
+    {
+        if (AnnoyingTeamsManager.Instance)
+        {
+            AnnoyingTeamsManager.Instance.CloseTeams();
+            InstallationHandler.Instance.Install("Uninstalling Teams", teamsSprite, 10, () => writeMsgToConsole("Teams Uninstalled Successfully."));
+        }
+        else
+        {
+            var msg = writeMsgToConsole("Teams not found");
+            msg.color = Color.red;
+        }
+    }
+
+    private void py_spotify_next()
+    {
+        if (SpotifyManager.Instance)
+        {
+            SpotifyManager.Instance.NextSong();
+        }
+        else
+        {
+            var msg = writeMsgToConsole("Spotify not found");
+            msg.color = Color.red;
+        }
+
     }
 }
 
