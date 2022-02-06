@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1300af1e1acd3bf488c9a77bb4f8afb8, type: 3}
   m_Name: like
   m_EditorClassIdentifier: 
-  possibleFollowups: []
+  possibleFollowups:
+  - {fileID: 11400000, guid: 379ec438193d381439ce2a8f2c4d4122, type: 2}
+  - {fileID: 11400000, guid: 5447ff0a049c02845b6fee655d2836c8, type: 2}
+  - {fileID: 11400000, guid: 29fe20325f0a2ac48b2b42b134d2f3b5, type: 2}
   custom: 
