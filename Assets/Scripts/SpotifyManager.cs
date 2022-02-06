@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SpotifyManager : MonoBehaviour
+public class SpotifyManager : SingletonBehaviour<SpotifyManager>
 {
     [SerializeField]
     public GameObject canvas;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class AnnoyingTeamsManager : MonoBehaviour
+public class AnnoyingTeamsManager : SingletonBehaviour<AnnoyingTeamsManager>
 {
     [SerializeField]
     public string[] teamsMessages;
@@ -66,6 +66,7 @@ public class AnnoyingTeamsManager : MonoBehaviour
     public void CloseTeams()
     {
         StopAllCoroutines();
+        CloseWindow();
     }
 
 }
