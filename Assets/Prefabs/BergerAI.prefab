@@ -1,5 +1,213 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &57560325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57560326}
+  - component: {fileID: 57560327}
+  m_Layer: 0
+  m_Name: 'Action on: changes'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57560326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57560325}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2863364110805193659}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &57560327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57560325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMatch: changes
+  additionalMatches: []
+  actions:
+  - id: 0
+  - id: 1
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: You will not get your certificate with commit messages like this!
+        emotion: 1
+    00000001:
+      type: {class: UnlockAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        components:
+        - {fileID: 11400000, guid: dca6a182cc3604249b1d765bd7dd5c12, type: 2}
+        - {fileID: 11400000, guid: d2546002b5cfe1d46a4393991b018db0, type: 2}
+--- !u!1 &482960304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482960305}
+  - component: {fileID: 482960306}
+  m_Layer: 0
+  m_Name: 'Action on: Version Control'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482960305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482960304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2863364110805193659}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482960306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482960304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMatch: Version Control
+  additionalMatches: []
+  actions:
+  - id: 0
+  - id: 1
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 2
+        message: You did not install the Upodate! That's a major security risk!
+        emotion: 5
+    00000001:
+      type: {class: EventAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        Event:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: Data, Assembly-CSharp
+              m_MethodName: SetNeedsUpdate
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+--- !u!1 &1056306025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056306026}
+  - component: {fileID: 1056306027}
+  m_Layer: 0
+  m_Name: 'Action on: fixes'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056306026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056306025}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2863364110805193659}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1056306027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056306025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMatch: fixes
+  additionalMatches: []
+  actions:
+  - id: 0
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: Where you sleeping during the first git seminar?
+        emotion: 1
 --- !u!1 &1258065025
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +219,7 @@ GameObject:
   - component: {fileID: 1258065026}
   - component: {fileID: 1258065027}
   m_Layer: 0
-  m_Name: 'Action on: ...'
+  m_Name: 'Action on: Sound(+1)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +251,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMatch: Sound
+  additionalMatches:
+  - Music
+  actions:
+  - id: 0
+  - id: 1
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 2
+        message: Did you know, I make music myself?
+        emotion: 4
+    00000001:
+      type: {class: InstallAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 3
+        name: Spotify
+        icon: {fileID: -320968955913235607, guid: 39151d3a7594ecb46b22dd4d3e52fb88, type: 3}
+        duration: 5
+        onCompleted:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+--- !u!1 &1377662650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377662651}
+  - component: {fileID: 1377662652}
+  m_Layer: 0
+  m_Name: 'Action on: ...'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1377662651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377662650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2863364110805193659}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1377662652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377662650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   mainMatch: ...
   additionalMatches: []
   actions:
@@ -54,15 +342,79 @@ MonoBehaviour:
     00000000:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
-        delay: 2
-        message: You still haven't Installed Teams?
+        delay: 1
+        message: This is not what commits should look like!
         emotion: 1
+    00000001:
+      type: {class: UnlockAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        components:
+        - {fileID: 11400000, guid: dca6a182cc3604249b1d765bd7dd5c12, type: 2}
+        - {fileID: 11400000, guid: d2546002b5cfe1d46a4393991b018db0, type: 2}
+--- !u!1 &1760606442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760606443}
+  - component: {fileID: 1760606444}
+  m_Layer: 0
+  m_Name: 'Action on: Coding'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760606443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760606442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2863364110805193659}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760606444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760606442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMatch: Coding
+  additionalMatches: []
+  actions:
+  - id: 0
+  - id: 1
+  addType: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 2
+        message: I LOVE coding!
+        emotion: 3
     00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 3
-        name: Teams
-        icon: {fileID: 21300000, guid: 95d6320c8bc64134b9df759fc364f0a6, type: 3}
+        name: Pyhton
+        icon: {fileID: 9027648078685064782, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
         duration: 5
         onCompleted:
           m_PersistentCalls:
@@ -108,6 +460,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1258065026}
+  - {fileID: 1377662651}
+  - {fileID: 1056306026}
+  - {fileID: 57560326}
+  - {fileID: 1760606443}
+  - {fileID: 482960305}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

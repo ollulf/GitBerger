@@ -20,6 +20,7 @@ public class GitBergerUpdater : MonoBehaviour
         textBox.GetComponent<TMPro.TextMeshProUGUI>().text = "Your GitBerger client is Uptodate!";
         doneButton.SetActive(true);
         loadingIcon.SetActive(false);
+        Data.Instance.HasGitUpdate = true;
     }
 
     public void ToggleUpdateWindow()

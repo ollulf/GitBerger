@@ -27,7 +27,10 @@ public class PushState : CommitStateBase
 {
     public override ActionResult TryPush()
     {
-        return new ActionResult(new PullState());
+        if (Data.Instance.NeedsGitUpdate && !Data.Instance.HasGitUpdate)
+            return new ActionResult("GITHUP does not support GitBerger Versions oder then 3.13f15 you are using 3.06f9. Please install the recent update.");
+        else
+            return new ActionResult(new PullState());
     }
     public override ActionResult TrySubmit() { return new ActionResult("Git berger only support one commit per push. Please push first."); }
     public override ActionResult TryPull() { return new ActionResult("No changes detected..."); }
