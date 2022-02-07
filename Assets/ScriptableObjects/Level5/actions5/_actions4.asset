@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: _actions4
   m_EditorClassIdentifier: 
   possibleFollowups:
-  - {fileID: 11400000, guid: d8e1014997411d74b831faee3ea48953, type: 2}
   - {fileID: 11400000, guid: 5b06994c9465fce4e9cb2a58f89b97d0, type: 2}
-  - {fileID: 11400000, guid: 9f289efbd5ef0c147804dd5487b4d946, type: 2}
   - {fileID: 11400000, guid: 77ab769e8ae4f7243b069dccb364513c, type: 2}
-  - {fileID: 11400000, guid: e857074f4548d9249a0e9b1b0a6736c3, type: 2}
   custom: 

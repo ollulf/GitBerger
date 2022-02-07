@@ -15,27 +15,24 @@ public class PopupLoginBehaviour : MonoBehaviour
     public void TryLogin()
     {
         string nane = nameField.text;
-        loginCounter++;
 
         if (nameField.text == "")
             PopopMessageHandler.Instance.ShowError("Please use a correct user name associated with a GITHUP account!");
+        else if (string.IsNullOrEmpty(passwordField.text))
+            PopopMessageHandler.Instance.ShowError("Invalid password. Your password needs to be at least 6 characters but no more then (12*6)/9");
         else
         {
-            int rand = loginCounter > 4 ? 0 : Random.Range(0, 4);
-
-            switch (loginCounter)
+            switch (loginCounter++)
             {
                 case 0:
-                case 1:
-                    Success();
+                    PopopMessageHandler.Instance.ShowError("The name '" + nameField.text + "' could no be found in the GITHUP database. Please use a valid account name.");
                     break;
-
-                case 2:
+                case 1:
                     PopopMessageHandler.Instance.ShowError("The provided password is incorrect. Did you use enough special characters?");
                     break;
 
                 default:
-                    PopopMessageHandler.Instance.ShowError("The name '" + nameField.text + "' could no be found in the GITHUP database. Please use a valid account name.");
+                    Success();
                     break;
             }
         }

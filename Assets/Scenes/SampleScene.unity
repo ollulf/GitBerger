@@ -4928,6 +4928,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4525322769077206357, guid: b2998c6e590a7514ea0eb12d5c7036d4, type: 3}
+      propertyPath: m_InputType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525322769077206357, guid: b2998c6e590a7514ea0eb12d5c7036d4, type: 3}
+      propertyPath: m_ContentType
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4796677685538488968, guid: b2998c6e590a7514ea0eb12d5c7036d4, type: 3}
       propertyPath: m_Name
       value: LoginPopUpBox
@@ -5984,11 +5992,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 202cf0d5d62176f46b58cb3d5b92d7b9, type: 2}
   - {fileID: 11400000, guid: c135c01c2ac89314e9a7adbe46c55f5c, type: 2}
   - {fileID: 11400000, guid: ecb4f316db6228f4880236402a090f3a, type: 2}
-  - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
   - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
   - {fileID: 11400000, guid: da61fb4b83722ed4198b448ff1512c0d, type: 2}
   - {fileID: 11400000, guid: 16958ae7a95bf6a4388ffb8c0b332570, type: 2}
   - {fileID: 11400000, guid: 6bc99efae38a27c4ab6b08e6f838607c, type: 2}
+  - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
 --- !u!1 &2114662771
 GameObject:
@@ -6763,11 +6771,6 @@ PrefabInstance:
       propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5340807661608032564}
-    - target: {fileID: 2792191549788047416, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].message
-      value: I'm sorry, but IT'S TIME TO SAY GOODBYEEE! Since I'm not your Prof.
-        anymore you may call me Florian now!
-      objectReference: {fileID: 0}
     - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6824,26 +6827,6 @@ PrefabInstance:
       propertyPath: actions.Array.data[1].Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1333148029}
-    - target: {fileID: 8697790408383564439, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697790408383564439, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1]
-      value: Assembly-CSharp UnlockAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697790408383564439, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].delay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697790408383564439, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].components.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697790408383564439, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].components.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
 --- !u!4 &2863364109981772313 stripped

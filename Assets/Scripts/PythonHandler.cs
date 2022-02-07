@@ -134,10 +134,10 @@ public class PythonHandler : MonoBehaviour
 
     private void py_uninstall_teams()
     {
-        if (AnnoyingTeamsManager.Instance)
+        if (AnnoyingTeamsManager.Instance && AnnoyingTeamsManager.Instance.IsInstalled)
         {
             AnnoyingTeamsManager.Instance.CloseTeams();
-            InstallationHandler.Instance.Install("Uninstalling Teams", teamsSprite, 10, () => writeMsgToConsole("Teams Uninstalled Successfully."));
+            InstallationHandler.Instance.Install("Uninstalling Teams", teamsSprite, 10, () => writeMsgToConsole("Teams Uninstalled Successfully."), overrideText: true);
         }
         else
         {

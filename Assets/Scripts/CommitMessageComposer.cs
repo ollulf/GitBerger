@@ -71,7 +71,7 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
         {
             foreach (CommitMessageTextComponent text in component.TextArray)
             {
-                if (IsUnlocked(text) && IsComponentUsable(text))
+                if (IsComponentUsable(text))
                     Instantiate(commitMessageUIPrefab, transform).Init(text);
             }
         }
@@ -85,21 +85,20 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
             return false;
         }
 
-        if (consumedSet.Contains(_component))
-        {
+        if (!IsUnlocked(_component))
             return false;
-        }
-        else
-        {
-            if (_component.Followups.Length == 0)
-                return true;
 
-            foreach (var followup in _component.Followups)
-            {
-                if (IsComponentUsable(followup, depth + 1))
-                    return true;
-            }
+        if (consumedSet.Contains(_component))
             return false;
+     
+        if (_component.Followups.Length == 0)
+            return true;
+
+        foreach (var followup in _component.Followups)
+        {
+            if (IsComponentUsable(followup, depth + 1))
+                return true;
         }
+        return false;
     }
 }

@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleFollowups:
   - {fileID: 11400000, guid: 77ab769e8ae4f7243b069dccb364513c, type: 2}
-  - {fileID: 11400000, guid: d8e1014997411d74b831faee3ea48953, type: 2}
-  - {fileID: 11400000, guid: 9f289efbd5ef0c147804dd5487b4d946, type: 2}
   - {fileID: 11400000, guid: 8ad18002b49265141ade40eec2708480, type: 2}
   custom: 

@@ -20,9 +20,13 @@ public class AnnoyingTeamsManager : SingletonBehaviour<AnnoyingTeamsManager>
     private Animator anim;
     private AudioSource teamsSound;
 
+    private bool isInstalled;
+
+    public bool IsInstalled => isInstalled;
 
     public void Start()
     {
+        isInstalled = true;
         window.SetActive(false);
         anim = window.GetComponent<Animator>();
         teamsSound = gameObject.GetComponent<AudioSource>();
@@ -67,6 +71,7 @@ public class AnnoyingTeamsManager : SingletonBehaviour<AnnoyingTeamsManager>
     {
         StopAllCoroutines();
         CloseWindow();
+        isInstalled = false;
     }
 
 }

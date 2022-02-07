@@ -12,15 +12,15 @@ public class InstallBar : MonoBehaviour
     [SerializeField] TMPro.TextMeshProUGUI nameText;
     [SerializeField] AnimationCurve[] installingCurves;
 
-    public void Init(string _name, Sprite _icon, float _duration, System.Action _onCompleted)
+    public void Init(string _name, Sprite _icon, float _duration, System.Action _onCompleted, bool overrideText)
     {
-        StartCoroutine(InstallRoutine(_name, _icon, _duration, _onCompleted));
+        StartCoroutine(InstallRoutine(_name, _icon, _duration, _onCompleted, overrideText));
     }
 
-    private IEnumerator InstallRoutine(string _name, Sprite _icon, float _duration, System.Action _onCompleted)
+    private IEnumerator InstallRoutine(string _name, Sprite _icon, float _duration, System.Action _onCompleted, bool overrideText)
     {
         logo.sprite = _icon;
-        nameText.text = "Installing " + _name;
+        nameText.text = overrideText ? _name : "Installing " + _name;
         AnimationCurve curve = installingCurves[UnityEngine.Random.Range(0, installingCurves.Length)];
         float t = 0;
 
@@ -30,7 +30,7 @@ public class InstallBar : MonoBehaviour
             yield return null;
             t += Time.deltaTime;
         }
-        
+
         _onCompleted?.Invoke();
 
         Destroy(gameObject);
