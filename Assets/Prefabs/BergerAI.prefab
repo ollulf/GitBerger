@@ -819,7 +819,8 @@ MonoBehaviour:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 0
-        message: I'm sorry, but IT'S TIME TO SAY GOODBYEEE!
+        message: I'm sorry, but IT'S TIME TO SAY GOODBYEEE! Since I'm not your Prof.
+          anymore you may call me Florian now!
         emotion: 4
 --- !u!1 &2863364110805193657
 GameObject:
@@ -2300,6 +2301,7 @@ MonoBehaviour:
   additionalMatches: []
   actions:
   - id: 0
+  - id: 1
   addType: 0
   references:
     version: 1
@@ -2309,6 +2311,12 @@ MonoBehaviour:
         delay: 0
         message: Of course you have a chance. Practice and work hard.
         emotion: 0
+    00000001:
+      type: {class: UnlockAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        components:
+        - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
 --- !u!1 &7958694299706967640
 GameObject:
   m_ObjectHideFlags: 0
