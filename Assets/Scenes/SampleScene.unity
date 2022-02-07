@@ -6752,10 +6752,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 813796713}
     - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].delay
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 338738188}
@@ -6764,97 +6760,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 454254007}
     - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0]
-      value: Assembly-CSharp BergerCommitAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1]
-      value: Assembly-CSharp InstallAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].icon
-      value: 
-      objectReference: {fileID: -3579509566186479471, guid: 6f584d59c69fea2449123c1887d733eb, type: 3}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].name
-      value: Teams
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].delay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].delay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].emotion
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].message
-      value: Did you install teams yet?
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].duration
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5340807661608032564}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5340807661608032564}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 620401255969294040, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6911,13 +6819,6 @@ PrefabInstance:
       propertyPath: actions.Array.data[1].Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1333148029}
-    - target: {fileID: 7380578098803902130, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].message
-      value: 'Please be more specific! What kind of features?
-
-        Also always
-        use a FeatureFactory to create new features.'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
 --- !u!4 &2863364109981772313 stripped

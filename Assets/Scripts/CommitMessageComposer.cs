@@ -23,6 +23,7 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
 
     public void UpdateCommitOptions()
     {
+        CommitMessageLineDisplayer.Instance.Text = "";
         SetMessageOptions(components);
     }
 
@@ -48,6 +49,8 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
     public void unlockCommit(CommitMessageTextComponent _component)
     {
         lockedSet.Remove(_component);
+        if (CommitListHandler.Instance.State.GetType() == typeof(SubmitState) && CommitMessageLineDisplayer.Instance.Text == "")
+            UpdateCommitOptions();
     }
 
     public bool IsUnlocked(CommitMessageTextComponent _component)

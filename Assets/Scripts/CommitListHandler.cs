@@ -9,6 +9,7 @@ public class CommitListHandler : SingletonBehaviour<CommitListHandler>
 
     private List<Commit> commits;
     private CommitStateBase state;
+    public CommitStateBase State => state;
     private Commit current;
 
     public static System.Action<string> OnNewPlayerPush;
