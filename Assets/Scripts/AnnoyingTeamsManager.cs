@@ -16,9 +16,14 @@ public class AnnoyingTeamsManager : SingletonBehaviour<AnnoyingTeamsManager>
 
     public int minTime, maxTime;
 
+    [Tooltip("x=> messages sent, y= min/max multiplyer")]
+    public AnimationCurve curveTimeOverMessages = AnimationCurve.Constant(0, 25, 1);
+
     public GameObject textWindow, window;
     private Animator anim;
     private AudioSource teamsSound;
+
+    private int iterations;
 
     private bool isInstalled;
 
@@ -37,10 +42,11 @@ public class AnnoyingTeamsManager : SingletonBehaviour<AnnoyingTeamsManager>
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minTime, maxTime));
+            yield return new WaitForSeconds(Random.Range(minTime, maxTime) * curveTimeOverMessages.Evaluate(iterations));
             anim.Play("TeamsFadeIn", 1);
             teamsSound.Play();
 
+            iterations++;
             string message = randomIn(teamsMessages);
 
             message = string.Format(message, randomIn(replace0), randomIn(replace1));
