@@ -257,6 +257,7 @@ MonoBehaviour:
   actions:
   - id: 0
   - id: 1
+  - id: 2
   addType: 0
   references:
     version: 1
@@ -288,6 +289,13 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 1
               m_CallState: 2
+    00000002:
+      type: {class: LockAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        components:
+        - {fileID: 11400000, guid: 5c1262055da967a4b98a68adbf4773ba, type: 2}
+        - {fileID: 11400000, guid: 9665364393a8c8841adeaa168091e749, type: 2}
 --- !u!1 &1377662650
 GameObject:
   m_ObjectHideFlags: 0
