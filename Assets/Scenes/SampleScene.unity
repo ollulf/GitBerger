@@ -5981,7 +5981,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c135c01c2ac89314e9a7adbe46c55f5c, type: 2}
   - {fileID: 11400000, guid: ecb4f316db6228f4880236402a090f3a, type: 2}
   - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
-  - {fileID: 11400000, guid: 728629dc3821cd741b25a3c58e42a4aa, type: 2}
   - {fileID: 11400000, guid: 940de95c0b4b15b4795a6c6c4fbdc5b3, type: 2}
   - {fileID: 11400000, guid: a6b05844e4337b04399f29e08aa502c0, type: 2}
   - {fileID: 11400000, guid: 4dfe6b6473298f44a860e3d1f9a79f74, type: 2}
@@ -6760,34 +6759,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 813796713}
     - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2]
-      value: Assembly-CSharp LockAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2].delay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2].components.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2].components.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 5c1262055da967a4b98a68adbf4773ba, type: 2}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2].components.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9665364393a8c8841adeaa168091e749, type: 2}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[2].components.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 338738188}
@@ -6800,7 +6771,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5340807661608032564}
     - target: {fileID: 2844512552960288436, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[0].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8755874128462839906}
     - target: {fileID: 2863364110805193657, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}

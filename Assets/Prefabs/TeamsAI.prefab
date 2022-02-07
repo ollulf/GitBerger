@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5340807660461687431
 Transform:
   m_ObjectHideFlags: 0
@@ -71,8 +71,32 @@ MonoBehaviour:
   - Minecraft
   - 'Dim: A Light in the Dark'
   - 'Call of Duty: Warzone'
-  minTime: 0
+  minTime: 5
   maxTime: 10
+  curveTimeOverMessages:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.036
+      outSlope: -0.036
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25
+      value: 0.1
+      inSlope: -0.036
+      outSlope: -0.036
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   textWindow: {fileID: 0}
   window: {fileID: 0}
 --- !u!82 &755758088
@@ -86,7 +110,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e13aaa5d8ebf72c458b8131800da5349, type: 2}
   m_audioClip: {fileID: 8300000, guid: 033cc379a33f06c40ac20c238ea3facb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

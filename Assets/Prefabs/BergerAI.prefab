@@ -1661,6 +1661,12 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
+      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 1
+        message: Minecraft is good... but have you tried MineTest?
+        emotion: 0
+    00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 5
@@ -1682,12 +1688,6 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 1
               m_CallState: 2
-    00000001:
-      type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
-      data:
-        delay: 1
-        message: Minecraft is good... but have you tried MineTest?
-        emotion: 0
 --- !u!1 &5102072206371091406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,7 +2482,7 @@ GameObject:
   - component: {fileID: 3432738975070783653}
   - component: {fileID: 1942828056049467509}
   m_Layer: 0
-  m_Name: 'Action on: Anime'
+  m_Name: 'Action on: anime?'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2514,7 +2514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMatch: Anime
+  mainMatch: anime?
   additionalMatches: []
   actions:
   - id: 0
