@@ -10,6 +10,8 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
     [SerializeField] CommitMessageTextComponent[] lockedComponents;
     [SerializeField] CommitMessageOptionUIElement commitMessageUIPrefab;
 
+    [SerializeField] CommitMessageTextComponent noneVisible;
+
     private HashSet<CommitMessageTextComponent> lockedSet = new HashSet<CommitMessageTextComponent>();
     private HashSet<CommitMessageTextComponent> consumedSet = new HashSet<CommitMessageTextComponent>();
 
@@ -67,14 +69,23 @@ public class CommitMessageComposer : SingletonBehaviour<CommitMessageComposer>
     {
         CommitSubmitter.Instance.setCanSubmit(false);
         clearOptions();
+
+        int counter = 0;
+
         foreach (CommitMessageTextComponent component in _components)
         {
             foreach (CommitMessageTextComponent text in component.TextArray)
             {
                 if (IsComponentUsable(text))
+                {
                     Instantiate(commitMessageUIPrefab, transform).Init(text);
+                    counter++;
+                }
             }
         }
+
+        if (counter == 0)
+            Instantiate(commitMessageUIPrefab, transform).Init(noneVisible);
     }
 
     private bool IsComponentUsable(CommitMessageTextComponent _component, int depth = 0)
