@@ -891,11 +891,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324081306}
   m_CullTransparentMesh: 1
---- !u!1 &338738188 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3706790113784631093, guid: d1a37ac0df5073541b5493001531c6a4, type: 3}
-  m_PrefabInstance: {fileID: 8755874128462839905}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &393991921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5997,6 +5992,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bc99efae38a27c4ab6b08e6f838607c, type: 2}
   - {fileID: 11400000, guid: 42d648ab77255eb4d89c1236fca47d5e, type: 2}
   commitMessageUIPrefab: {fileID: -44813236025271103, guid: f6a3249b6fed4fb4bbe05b078ec4488f, type: 3}
+  noneVisible: {fileID: 11400000, guid: df4e084931b00684aa96ac05eec69919, type: 2}
 --- !u!1 &2114662771
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,10 +6754,6 @@ PrefabInstance:
       propertyPath: actions.Array.data[1].Event.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 813796713}
-    - target: {fileID: 1258065027, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
-      propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 338738188}
     - target: {fileID: 1760606444, guid: c4b92bdba5184f1429950ea0a6bdf004, type: 3}
       propertyPath: actions.Array.data[1].onCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
