@@ -75,6 +75,12 @@ public class SpotifyManager : SingletonBehaviour<SpotifyManager>
         UpdateTitle();
     }
 
+    public void Play(int id)
+    {
+        currentSong = id -2;
+        NextSong();
+    }
+
     public void TogglePlay()
     {
         CommitMessageComposer.Instance.unlockCommit(toUnlock);

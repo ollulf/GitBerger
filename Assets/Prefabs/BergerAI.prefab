@@ -2019,10 +2019,16 @@ MonoBehaviour:
   actions:
   - id: 0
   - id: 1
+  - id: 2
   addType: 0
   references:
     version: 1
     00000000:
+      type: {class: PlayMusicAction, ns: , asm: Assembly-CSharp}
+      data:
+        delay: 0
+        music: 9
+    00000001:
       type: {class: BergerCommitAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 3
@@ -2030,7 +2036,7 @@ MonoBehaviour:
 
 '
         emotion: 2
-    00000001:
+    00000002:
       type: {class: EventAction, ns: , asm: Assembly-CSharp}
       data:
         delay: 6

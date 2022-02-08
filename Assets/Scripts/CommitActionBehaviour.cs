@@ -65,6 +65,9 @@ public class CommitActionBehaviour : MonoBehaviour
             case ActionType.LockText:
                 actions.Add(new LockAction());
                 break;
+            case ActionType.PlayMusic:
+                actions.Add(new PlayMusicAction());
+                break;
         }
         addType = ActionType.None;
     }
@@ -77,7 +80,8 @@ public enum ActionType
     BergerCommit,
     InstallApp,
     UnlockText,
-    LockText
+    LockText,
+    PlayMusic,
 }
 
 [System.Serializable]
@@ -168,5 +172,18 @@ public class LockAction : Action
     {
         foreach (CommitMessageTextComponent component in components)
             CommitMessageComposer.Instance.lockCommit(component);
+    }
+}
+
+[System.Serializable]
+public class PlayMusicAction : Action
+{
+    [Header("PlayMusic")]
+    [SerializeField]
+    int music;
+
+    public override void run()
+    {
+        SpotifyManager.Instance.Play(music);
     }
 }
