@@ -1194,7 +1194,7 @@ MonoBehaviour:
       data:
         delay: 1
         message: Did you install teams yet?
-        emotion: 5
+        emotion: 3
     00000001:
       type: {class: InstallAction, ns: , asm: Assembly-CSharp}
       data:
