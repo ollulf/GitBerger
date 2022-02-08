@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 6348531357963977906}
   - component: {fileID: 8746950425813894927}
   m_Layer: 0
-  m_Name: 'Action on: me?'
+  m_Name: 'Action on: like me?'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec9f4daa5f22cf40802427c96e43139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMatch: me?
+  mainMatch: like me?
   additionalMatches: []
   actions:
   - id: 0
